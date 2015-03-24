@@ -571,7 +571,7 @@
                         <label class="control-label col-sm-5 left-24" tabindex ='25'>Notify?</label>
                         <div class="col-sm-5 " style="padding-left:9px;">
                             <label class="radio-inline" style="margin-left:-1px;">
-                                <input type="radio" name="data[data][notif]" id="optionsRadiosInline1" value="y">Yes
+                                <input type="radio" name="data[data][notif]" id="optionsRadiosInline1" value="y" >Yes
                             </label>
                             <label class="radio-inline" >
                                 <input type="radio" name="data[data][notif]" id="optionsRadiosInline2" value="n" checked>No
@@ -586,8 +586,7 @@
                 <div class="col-sm-6">
                     <div class="form-group">
                         <label class="control-label p-0 col-sm-3" ></label>
-                        <div class="col-sm-6" style="padding-left: 20px;
-    padding-top: 10px;color:#888;">
+                        <div class="col-sm-6" style="padding-left: 20px; padding-top: 10px;color:#888;">
                             <?php 
                             $dt = new DateTime();
                             echo $dt->format('d-m-Y g:i A');
@@ -645,6 +644,84 @@
                                 <div class="msg">This is the notification message: Be careful what you write. This will be directly displayed in the mobile of users.</div> 
                                 </a> 
                            <span class="help-block" style="float:right;width: 125px;">Characters Left &nbsp;<div id="notif_msg_char"style="float:right;margin-right:12px;">140</div></span>       
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="SendNotyToR">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" style="margin-left:0;">Send Notification to </label>
+                        <div class="col-sm-5 " style="padding-left:9px;">
+                            <label class="radio-inline" style="margin-left:-1px;">
+                                <input type="radio" name="data[data][notification_to]" id="notifytoAll" value="All" checked>All
+                            </label>
+                            <label class="radio-inline" >
+                                <input type="radio" name="data[data][notification_to]" id="notifytoCustomiz" value="Customized" >Customized
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+            <div class="row" id="SendNotyTo" style="display:none;">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label class="control-label col-sm-3 margin_left">Occupations</label>
+                        <div id="getoccupations" class="col-md-9" style="padding: 0 0 0 6px;">
+                            <label class="checkbox-inline col-sm-4" style="margin-left: 0px;">
+                                <input id="data[Occp][notification_occupation]" class="require-one" type="checkbox" value="Business/Employed" name="data[Occp][notification_occupation][]">
+                                Business/Employed
+                            </label>
+                            <label class="checkbox-inline col-sm-4" style="margin-left: 0px;">
+                                <input id="data[Occp][notification_occupation]" class="require-one" type="checkbox" value="Professional" name="data[Occp][notification_occupation][]">
+                                Professional
+                            </label>
+                            <label class="checkbox-inline col-sm-4" style="margin-left: 0px;">
+                                <input id="data[Occp][notification_occupation]" class="require-one" type="checkbox" value="Housewife" name="data[Occp][notification_occupation][]">
+                                Housewife
+                            </label>
+                            <label class="checkbox-inline col-sm-4" style="margin-left: 0px;">
+                                <input id="data[Occp][notification_occupation]" class="require-one" type="checkbox" value="Student" name="data[Occp][notification_occupation][]">
+                                Student
+                            </label>
+                            <label class="checkbox-inline col-sm-4" style="margin-left: 0px;">    
+                                <input id="data[Occp][notification_occupation]" class="require-one" type="checkbox" value="Others" name="data[Occp][notification_occupation][]">
+                                Others
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label class="control-label col-sm-3 margin_left">Gender</label>
+                        <div id="getoccupations" class="col-md-9" style="padding: 0 0 0 6px;">
+                            <label class="checkbox-inline col-sm-4" style="margin-left: 0px;">
+                                <input id="data[Gender][notification_gender]" class="require-one" type="checkbox" value="Male" name="data[Gender][notification_gender][]">
+                                Male
+                            </label>
+                            <label class="checkbox-inline col-sm-4" style="margin-left: 0px;">
+                                <input id="data[Gender][notification_gender]" class="require-one" type="checkbox" value="Female" name="data[Gender][notification_gender][]">
+                                Female
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label class="control-label col-sm-3 margin_left">Age-group</label>
+                        <div id="getoccupations" class="col-md-9" style="padding: 0 0 0 6px;">
+                            <label class="checkbox-inline col-sm-4" style="margin-left: 0px;">
+                                <input id="data[AgeG][notification_agegroup]" class="require-one" type="checkbox" value="1" name="data[AgeG][notification_agegroup][]">
+                                18-30
+                            </label>
+                            <label class="checkbox-inline col-sm-4" style="margin-left: 0px;">
+                                <input id="data[AgeG][notification_agegroup]" class="require-one" type="checkbox" value="2" name="data[AgeG][notification_agegroup][]">
+                                31-50
+                            </label>
+                            <label class="checkbox-inline col-sm-4" style="margin-left: 0px;">
+                                <input id="data[AgeG][notification_agegroup]" class="require-one" type="checkbox" value="3" name="data[AgeG][notification_agegroup][]">
+                                51+
+                            </label>
                         </div>
                     </div>
                 </div>

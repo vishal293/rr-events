@@ -78,6 +78,11 @@ $(function(){
             $('#notif_msg').attr('readonly',false);
             $('#notif_date').attr('readonly',false);
             $('#notif_time').addClass('disTime');
+            $('#SendNotyToR').show();
+            var notifyto = $("input[name='data[data][notification_to]']:checked").val();
+            if(notifyto == 'Customized'){ 
+            $('#SendNotyTo').show();
+            }
         }
         if(notif=='n'){
             $('#notif_date_btn').attr('disabled',true);
@@ -91,6 +96,8 @@ $(function(){
             $('#notif_time').val('');
             $('#notif_msg').val('');
             $('#notif_time').removeClass('disTime');
+            $('#SendNotyToR').hide();
+            $('#SendNotyTo').hide();
         } 
     }
 

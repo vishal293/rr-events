@@ -458,11 +458,14 @@
 		}
 
 		public function ajax_add(){
+			$data=$this->data;
+			$Occp=$data['Occp'];
+			$Gender=$data['Gender'];
+			$AgeG=$data['AgeG'];
 			$collName = $this->collectionName;	
 			$shephertz = new ShephertzApp();
 			$jsonDoc = new JSONObject(); 
-			date_default_timezone_set('UTC');	
-			$data=$this->data;
+			date_default_timezone_set('UTC');
 			$event=array();
 			$event=$data['data'];
 			$event['approved'] = '0';
@@ -484,17 +487,16 @@
 			}
 
 
-			$category=$data['cat'];
-			/*if($category==NULL){
-				echo json_encode('cat_error');
-				exit;
-			}*/				
+			$category=$data['cat'];			
 
 			if($event['offer'] == 'Offer'){
 				$collName = 'OfferCollection';
-			}				
-
+			}	
+			
 			$newdata = array_merge($event, $category);
+			$newdata = array_merge($newdata, $Occp);
+			$newdata = array_merge($newdata, $Gender);
+			$newdata = array_merge($newdata, $AgeG);
 			
 			foreach($newdata as $k=>$v){
 				$newjson = $jsonDoc->put($k,$v);
