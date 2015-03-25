@@ -94,6 +94,12 @@
     echo $this->Form->input('data.photo_2',array('value'=>$event['photo_2']));
     echo $this->Form->input('data.photo_3',array('value'=>$event['photo_3']));
     echo $this->Form->input('data.photo_4',array('value'=>$event['photo_4']));
+    echo $this->Form->input('data.photo_5',array('value'=>$event['photo_5']));
+    echo $this->Form->input('data.photo_6',array('value'=>$event['photo_6']));
+    echo $this->Form->input('data.photo_7',array('value'=>$event['photo_7']));
+    echo $this->Form->input('data.photo_8',array('value'=>$event['photo_8']));
+    echo $this->Form->input('data.photo_9',array('value'=>$event['photo_9']));
+    echo $this->Form->input('data.photo_10',array('value'=>$event['photo_10']));
     echo $this->Form->input('data.organizer_name',array('value'=>$event['organizer_name']));
         
     echo $this->Form->input('data.organizer_logo',array('value'=>$event['organizer_logo']));    
@@ -131,6 +137,43 @@
     );
     echo $this->Form->input('data.venue',array('value' =>$event['venue']
             )
+    );
+
+    echo $this->Form->input('data.notification_to',array('value' =>$event['notification_to']
+            )
+    );
+
+    $notification_occp = $event['notification_occupation'];
+    $occupations = array();
+    foreach($notification_occp as $single_notification => $single_value):{
+        array_push($occupations,$single_value);
+    }
+    endforeach;
+    $occupations = array_combine($occupations, $occupations);
+    echo $this->Form->input('data.notification_occupation', 
+        array('multiple' => 'checkbox', 'options' => $occupations, 'selected' => $occupations)
+    );
+
+    $notification_gender = $event['notification_gender'];
+    $gender = array();
+    foreach($notification_gender as $single_gender => $single_value):{
+        array_push($gender,$single_value);
+    }
+    endforeach;
+    $gender = array_combine($gender, $gender);
+    echo $this->Form->input('data.notification_gender', 
+        array('multiple' => 'checkbox', 'options' => $gender, 'selected' => $gender)
+    );
+    
+    $notification_agegroup = $event['notification_agegroup'];
+    $agegroup = array();
+    foreach($notification_agegroup as $single_agegroup => $single_value):{
+        array_push($agegroup,$single_value);
+    }
+    endforeach;
+    $agegroup = array_combine($agegroup, $agegroup);
+    echo $this->Form->input('data.notification_agegroup', 
+        array('multiple' => 'checkbox', 'options' => $agegroup, 'selected' => $agegroup)
     );
         
     ?>  
@@ -338,46 +381,21 @@
                 <div class="row"><hr></div>
                 <div class="row">
                     <div class="col-md-12" style="margin-bottom:20px;">
-                        <div class="col-xs-6 col-md-3">
                         <?php 
-                        $image = $event['photo_1'];
-                        if($image!=""): ?>
-                            <a href="<?php echo $image; ?>" class="test-popup-link thumbnail">
+                        
+for ($i = 1; $i <= 10; $i++) {
+    $image_id = 'photo_'.$i;    
+    $image = $event[$image_id];
+    if($image!=""): ?>
+    <div class="col-xs-6 col-md-3" >
+    <a href="<?php echo $image; ?>" class="test-popup-link thumbnail">
                               <img src="<?php echo $image; ?>" alt="...">
                             </a>
-                            <!-- <img src="<?php echo $image; ?>" height="100" width="100"> -->
-                        <?php endif;?>
-                        </div>
-                        <div class="col-xs-6 col-md-3">
-                            <?php 
-                            $image = $event['photo_2'];
-                            if($image!=""): ?>
-                                <a href="<?php echo $image; ?>" class="test-popup-link thumbnail">
-                                    <img src="<?php echo $image; ?>" alt="...">
-                                </a>
-                                <!-- <img src="<?php echo $image; ?>" height="100" width="100"> -->
-                            <?php endif;?>                
-                        </div>
-                        <div class="col-md-3">
-                            <?php 
-                                $image = $event['photo_3'];
-                                if($image!=""): ?>
-                                    <a href="<?php echo $image; ?>" class="test-popup-link thumbnail">
-                                        <img src="<?php echo $image; ?>" alt="...">
-                                    </a>
-                                    <!-- <img src="<?php echo $image; ?>" height="100" width="100"> -->
-                            <?php endif;?>
-                        </div>
-                        <div class="col-md-3">
-                            <?php 
-                                $image = $event['photo_4'];
-                                if($image!=""): ?>
-                                    <a href="<?php echo $image; ?>" class="test-popup-linkthumbnail">
-                                        <img src="<?php echo $image; ?>" alt="...">
-                                    </a><!-- 
-                                    <img src="<?php echo $image; ?>" height="100" width="100"> -->
-                            <?php endif;?>                
-                        </div>
+                            </div>
+    <?php endif;                        
+} 
+
+?>
                     </div>
                 </div>
             </div>
@@ -495,9 +513,60 @@
                                     <?php echo $event['notif_msg']; ?>                          
                                 </p>
                             </div>
-                        </div>
                     </div>
-            
+                </div>
+                <div class="row">
+                   <div class="form-group">
+                            <label class="control-label col-md-4">Notification To:</label>
+                            <div class="col-md-5">
+                                <p>
+                                    <?php if($event['notification_to'] == 'All'){ echo "All"; }else{ echo "Send to defined below"; } ?>                          
+                                </p>
+                            </div>
+                    </div>
+                </div>
+                <?php if($event['notification_to'] != 'All'){ ?>
+                <div class="row">
+                   <div class="form-group">
+                            <label class="control-label col-md-4">Occupations:</label>
+                            <div class="col-md-5">
+                                <p>
+                                    <?php echo implode(", ", $event['notification_occupation']); ?>                          
+                                </p>
+                            </div>
+                    </div>
+                </div>
+                <div class="row">
+                   <div class="form-group">
+                            <label class="control-label col-md-4">Gender:</label>
+                            <div class="col-md-5">
+                                <p>
+                                    <?php echo implode(", ", $event['notification_gender']); ?>                          
+                                </p>
+                            </div>
+                    </div>
+                </div>
+                <div class="row">
+                   <div class="form-group">
+                            <label class="control-label col-md-4">Age-group:</label>
+                            <div class="col-md-5">
+                                <p>
+                                    <?php 
+                                    $variable = $event['notification_agegroup'];
+                                    foreach ($variable as $key => $value) {
+                                        if($value == 1)
+                                            echo "18-30<br>";
+                                        if($value == 2)
+                                            echo "31-50<br>";
+                                        if($value == 3)
+                                            echo "51+<br>";
+                                    }
+                                    ?>                          
+                                </p>
+                            </div>
+                    </div>
+                </div>
+                <?php }?>
             </div>
         </div>
 </div>
