@@ -11,14 +11,16 @@ $(document).ready(function() {
     });
 });  
 
-$("[required='required']").click(function() {
+$("[required='required']").click(function(event) {
+    console.log($(this).index());
     var ff = $(this).attr('id');
     var i = 0;
     var c = 0;
     var labels = [];
     var focuses = [];
-
+    var type = $(this).attr('type');
     $("[required='required']").each(function(){
+        console.log($(this).index());
         if(ff != $(this).attr('id') && i == 0){
             var input = $(this).attr('id');
             var value = $('#'+input).val();
@@ -26,21 +28,12 @@ $("[required='required']").click(function() {
             if(!value){
                 $('#'+input).closest('.form-group').addClass('has-error');
                 var label = $('#'+input).closest('.form-group')[0]['children'][0]['innerText'];
-                console.log(label);
                 if(label!=""){
                     labels.push(label);
                     focuses.push(input);
                 }
-                
-                /*if(c==0){
-                    setTimeout(function(){
-                    $('#'+input).focus();
-                    }, 1);
-                }
-                c++;*/
             } else {
-                //$('#'+input).closest('.form-group').addClass('has-error');
-                $(this).closest(".form-group").removeClass("has-error"); 
+                $(this).closest(".form-group").removeClass("has-error");
             }
         }
         if(ff == $(this).attr('id')){
@@ -50,7 +43,9 @@ $("[required='required']").click(function() {
     if(labels.length!==0){
         alert("Please Enter the following fields first\n"+labels.join("\n"));
         $('#'+focuses[0]).focus();
-
+        if(type == 'file'){
+            event.preventDefault();
+        }
     }
 }).change(function(){
     var input = $(this);
@@ -110,19 +105,15 @@ function convert_time(time){
 }
 
 function check_time(sdate,edate,stime,etime){
-    console.log('check');
-    console.log(stime.indexOf(':'));
     if(stime.indexOf(':') == -1)
     {
         stime = stime.slice(0,2) + ":00 " + stime.slice(3);
-        console.log(stime);
     }
     if(etime != "")
     {
         if(etime.indexOf(':') == -1)
         {
             etime = etime.slice(0,2) + ":00 "+ etime.slice(3);
-            console.log(etime);
         }
     }
     var ret = true;
@@ -131,11 +122,7 @@ function check_time(sdate,edate,stime,etime){
     }
     var conv_stime = convert_time(stime);
     var conv_etime = convert_time(etime);
-    console.log('on return');
-    console.log(conv_stime +'-'+ conv_etime );
 
-    console.log('date');
-    console.log(sdate+'='+edate);
     if(sdate==edate && conv_stime>conv_etime){
     
         ret = false;
@@ -143,11 +130,7 @@ function check_time(sdate,edate,stime,etime){
     return ret;
 }
 
-$('#end_time').focus(function(){
-    console.log("end time");
-});
 $('#venue').focus(function(){
-    console.log('here');
     var sdate = $('#start_date').val();
     var stime = $('#start_time').val();
     var edate = $('#end_date').val();
@@ -340,7 +323,6 @@ $('#submit').click(function(){
                     $('#loading').html(loading);
                 },
                 success:function(resp){
-                    console.log(resp);
                     var ret = jQuery.parseJSON(resp);
                     if(ret != '_err'){
                         var returns = ret.path.match(/offer/);
@@ -372,7 +354,6 @@ $('#submit').click(function(){
 function mailToadmin(ret,ename){
     var data = {'ret': ret,'ename':ename};
 
-    console.log(data);
     var url = config.user+'/email';
     $.ajax({
         url: url,
