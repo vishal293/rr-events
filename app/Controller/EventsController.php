@@ -69,7 +69,6 @@
 				$event['event_latitude'] = $json_object->event_latitude;
 				$event['start_date'] = $json_object->start_date;
 				$event['end_date'] = $json_object->end_date;
-
 				$event['start_date'] = substr($event['start_date'],0,10);
 				
 
@@ -102,6 +101,11 @@
 				$event['category_id'] = $json_object->category_id;
 				$event['category_name_str'] = $this->getCatTostring($json_object->category_id);
 				$event['venue'] = $json_object->venue;
+				$event['notification_to'] = $json_object->notification_to;
+				$event['notification_occupation'] = $json_object->notification_occupation;
+				$event['notification_gender'] = $json_object->notification_gender;
+				$event['notification_agegroup'] = $json_object->notification_agegroup;
+
 			}
 			return $event;
 			
@@ -419,6 +423,9 @@
 			$jsonDoc = new JSONObject();
 			$docid = $this->data['data']['id'];
 			$data=$this->data['data'];
+			
+			// pr($data);
+			// exit;
 			date_default_timezone_set('UTC');
 			$data['updated_on'] = $shephertz->getUTCtime();
 			$data['start_time'] = date("H:i", strtotime($data['start_time']));
@@ -427,7 +434,6 @@
 			
 
 			$data['start_date'] = $shephertz->utilme($data['start_date']);
-            // pr($event['start_date']);
 
 			if(!$data['end_date']){
 				$data['end_date']= $data['start_date'];
@@ -525,11 +531,14 @@
 		}
 
 		public function ajax_edit(){
+			$data=$this->data;
+			$Occp=$data['Occp'];
+			$Gender=$data['Gender'];
+			$AgeG=$data['AgeG'];
 			$collName = $this->collectionName;
 			$shephertz = new ShephertzApp();
 			$jsonDoc = new JSONObject();
 			date_default_timezone_set('UTC');
-			$data=$this->data;
 			$docid = $data['id'];
 			$event=array();
 			$event=$data['data'];
@@ -549,10 +558,17 @@
 
 									
 			$category=$data['cat'];	
+					
+			if($event['notification_to'] == 'All'){
+				$Occp['notification_occupation']= array();
+				$Gender['notification_gender']= array();
+				$AgeG['notification_agegroup']= array();
+			}
 
-			$newdata = array_merge($event,$category);
-				
-				// pr($newdata);		
+			$newdata = array_merge($event, $category);
+			$newdata = array_merge($newdata, $Occp);
+			$newdata = array_merge($newdata, $Gender);
+			$newdata = array_merge($newdata, $AgeG);
 			foreach($newdata as $k=>$v){
 				$newjson = $jsonDoc->put($k,$v);
 			}

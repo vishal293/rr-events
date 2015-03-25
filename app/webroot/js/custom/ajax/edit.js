@@ -87,9 +87,27 @@ $('#venue').focus(function(){
     }
 });
 
+// Notification form sho hide
+$('#notifytoCustomiz').change(function(){
+    var c = this.checked ? true : false;
+    if(c){
+        $('#SendNotyTo').show();
+    }
+});
+
+$('#notifytoAll').change(function(){
+    var c = this.checked ? true : false;
+    if(c){
+        $('#SendNotyTo').hide();
+    }
+});
 
 $('#submit').click(function(){
-   var category = $("input[name='data[cat][category_id][]']:checked").val();
+    var category = $("input[name='data[cat][category_id][]']:checked").val();
+    var notifyto = $("input[name='data[data][notification_to]']:checked").val();
+    var occupation = $("input[name='data[Occp][notification_occupation][]']:checked").val();
+    var gender = $("input[name='data[Gender][notification_gender][]']:checked").val();
+    var agegroup = $("input[name='data[AgeG][notification_agegroup][]']:checked").val();
     var offer = $('#offer').val();
     var plan = $('#plan').val();
     var ename = $('#event_name').val();
@@ -98,8 +116,6 @@ $('#submit').click(function(){
     var amount = $('#amount').val();
     var edate = $('#end_date').val();
     var etime = $('#end_time').val();
-    console.log("Start Date - "+sdate + "End Date -"+edate);
-    console.log("Start Time- "+stime + "End Time" +etime);
     var venue = $('#event_address').val();
     var audience = $('#audience').val();
     var oneline_description = $('#oneline_description').val();
@@ -164,6 +180,21 @@ $('#submit').click(function(){
         }
     }
 
+    if(notifyto=='Customized'){
+        if(!occupation){
+            alert('Please Select Occupation');
+            return false;
+        }
+        if(!gender){
+            alert('Please Select Gender');
+            return false;
+        }
+        if(!agegroup){
+            alert('Please Select Age-group');
+            return false;
+        }
+    }
+
   //Validation for numbers - amount
      var numbers = /^[0-9]+$/; 
      if(amount){
@@ -185,7 +216,7 @@ $('#submit').click(function(){
          }
      }
 
-     if(hphoto&&hphoto_path==""||photo1&&photo1_path==""||photo2&&photo2_path==""||photo3&&photo3_path==""||photo4&&photo4_path==""||ologo&&ologo_path==""){
+    if(hphoto&&hphoto_path==""||photo1&&photo1_path==""||photo2&&photo2_path==""||photo3&&photo3_path==""||photo4&&photo4_path==""||ologo&&ologo_path==""){
         alert('Please wait till the image gets uploading');
         return false;
     }

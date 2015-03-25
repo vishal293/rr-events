@@ -615,9 +615,9 @@
                     <div class="form-group col-sm-6 end-time">
                         <label class="control-label p-0  col-sm-5" style="margin-left:0;"> Time</label>
                         <div class="input-group time col-sm-6" style="padding-left: 12px;float:left;">
-                            <input name="data[data][notif_time]" readonly type="text" class="form-control input-sm disTime" tabindex ='27' id="notif_time" required aria-describedby="notif_time_btn">
+                            <input name="data[data][notif_time]" type="text" class="form-control input-sm disTime" tabindex ='27' id="notif_time" required aria-describedby="notif_time_btn">
                             <span class="input-group-btn">
-                                    <button class="btn default btn-sm picker" type="button" id="notif_time_btn">
+                                    <button class="btn default btn-sm picker" readonly type="button" id="notif_time_btn">
                                         <i class="fa fa-clock-o"></i>
                                     </button>
                                 </span>
