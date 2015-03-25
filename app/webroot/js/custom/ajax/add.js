@@ -20,7 +20,7 @@ $(":input").click(function(event){
     var focuses = [];
     var type = $(this).attr('type');
     var required = $(this).attr('required');
-    $("input, select, textarea").each(function(){
+    $("input, select, textarea, button").each(function(){
     var required_attr = $(this).attr('required');
     var current_id = $(this).attr('id');
         if(ff != $(this).attr('id') && i == 0 && required_attr == 'required'){
