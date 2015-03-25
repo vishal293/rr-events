@@ -11,8 +11,54 @@ $(document).ready(function() {
     });
 });  
 
-$("[required='required']").click(function(event) {
-    console.log($(this).index());
+// New code added for validation msg
+$(":input").click(function(event){
+    var ff = $(this).attr('id');
+    var i = 0;
+    var c = 0;
+    var labels = [];
+    var focuses = [];
+    var type = $(this).attr('type');
+    var required = $(this).attr('required');
+    $("input, select, textarea, button").each(function(){
+    var required_attr = $(this).attr('required');
+    var current_id = $(this).attr('id');
+        if(ff != $(this).attr('id') && i == 0 && required_attr == 'required'){
+            var input = $(this).attr('id');
+            var value = $('#'+input).val();
+            var category = $("input[name='data[cat][category_id][]']:checked").val();
+            if(!value){
+                $('#'+input).closest('.form-group').addClass('has-error');
+                var label = $('#'+input).closest('.form-group')[0]['children'][0]['innerText'];
+                if(label!=""){
+                    labels.push(label);
+                    focuses.push(input);
+                }
+            } else {
+                $(this).closest(".form-group").removeClass("has-error");
+            }
+        }
+        if(ff == $(this).attr('id')){
+            i++;
+        }
+    });
+    if(labels.length!==0){
+        alert("Please Enter the following fields first\n"+labels.join("\n"));
+        $('#'+focuses[0]).focus();
+        if(type == 'file'){
+            event.preventDefault();
+        }
+    }
+}).change(function(){
+    var input = $(this);
+    var val = input.val();
+    var required_attr = $(this).attr('required');
+    if(val && required_attr == 'required'){
+        $(this).closest(".form-group").removeClass("has-error"); 
+    }
+});
+
+/*$("[required='required']").click(function(event) {
     var ff = $(this).attr('id');
     var i = 0;
     var c = 0;
@@ -20,7 +66,6 @@ $("[required='required']").click(function(event) {
     var focuses = [];
     var type = $(this).attr('type');
     $("[required='required']").each(function(){
-        console.log($(this).index());
         if(ff != $(this).attr('id') && i == 0){
             var input = $(this).attr('id');
             var value = $('#'+input).val();
@@ -54,7 +99,7 @@ $("[required='required']").click(function(event) {
         $(this).closest(".form-group").removeClass("has-error"); 
     }
 });
-
+*/
 $("#organizer_website").focus(function() {
   var input = $(this);
   var val = input.val();
