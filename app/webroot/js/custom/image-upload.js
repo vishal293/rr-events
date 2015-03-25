@@ -61,12 +61,10 @@ function ajax_pic_upload(ipname) {
             $('#'+ipname+'_display').attr("src",baseUrl+"img/ajax-loader.gif");    
 
             $('#'+ipname+'_loader').show();
-
-            console.log('end up here');
             beforeSubmit(ipname);
 		},			
         success: function(resp){
-            // console.log(resp);
+            console.log(resp);
             var ret = jQuery.parseJSON(resp);
             
             if(ret._error == "error"){

@@ -599,6 +599,7 @@
 			$shephertz = new ShephertzApp();						
 			$v = $this->data['inputfield'];	
 			$photo = $this->data['photo'][$v];
+			echo $photo;
 			if($photo['error'] == '0'){
 				if($photo['size'] <= $maxSize){
 					$filetype = array('image/gif', 'image/jpeg', 'image/jpg', 'image/png');
