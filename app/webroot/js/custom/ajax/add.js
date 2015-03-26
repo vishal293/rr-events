@@ -342,10 +342,10 @@ $('#submit').click(function(){
             return false;
          }
      }
-    // if(hphoto&&hphoto_path==""||photo1&&photo1_path==""||photo2&&photo2_path==""||photo3&&photo3_path==""||photo4&&photo4_path==""||ologo&&ologo_path==""){
-    //     alert('Please wait till the image gets uploading');
-    //     return false;
-    // }
+    if(hphoto&&hphoto_path==""||photo1&&photo1_path==""||photo2&&photo2_path==""||photo3&&photo3_path==""||photo4&&photo4_path==""||ologo&&ologo_path==""){
+        alert('Please wait till the image gets uploading');
+        return false;
+    }
 
      // return false;
     if(offer&&plan&&ename&&sdate&&stime&&etime&&venue&&audience&&oneline_description&&event_description&&organizer_name){
