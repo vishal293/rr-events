@@ -584,8 +584,12 @@
 					$Gender['notification_gender']= array('none');
 					$AgeG['notification_agegroup']= array('none');
 				}
-			}else{
-				$event['notification_to'] = NULL;
+			}
+			else{
+				$Occp=$data['Occp'];
+				$Gender=$data['Gender'];
+				$AgeG=$data['AgeG'];
+				$event['notification_to'] = 'None';
 				$Occp['notification_occupation']= array('none');
 				$Gender['notification_gender']= array('none');
 				$AgeG['notification_agegroup']= array('none');
