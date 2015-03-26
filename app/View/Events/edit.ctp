@@ -527,6 +527,17 @@ for ($i = 1; $i <= 10; $i++) {
                         </div>
                     </div>
                 </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label p-0 col-sm-3" ></label>
+                        <div class="col-sm-6" style="padding-left: 20px; padding-top: 10px;color:#888;">
+                            <?php 
+                            $dt = new DateTime();
+                            echo "Server current time ".$dt->format('d-m-Y g:i A');
+                             ?>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="row">
                 <div class="col-sm-12">

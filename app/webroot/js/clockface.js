@@ -84,33 +84,33 @@
       
         show: function(value) {
 
-          console.log($(window).height());
-          console.log("offset is");
-          console.log(this.$element.offset().top);
+          // console.log($(window).height());
+          // console.log("offset is");
+          // console.log(this.$element.offset().top);
           
-          console.log("Top");
-          console.log($(window).scrollTop());
+          // console.log("Top");
+          // console.log($(window).scrollTop());
 
 
 
-          var wheight = $(window).height();
-          var top = this.$element.offset().top;
-          var scroll = $(window).scrollTop();
-          var eheight =  this.$element.height();
-          var sub = wheight -  scroll;
-          console.log("sub is "+sub);
-          if(sub < 165) 
-          {
-            //$('.clockface').removeClass('up');
-            //$('.clockface').addClass('down');
-            //$('.clockface').css('bottom') = 'auto';
+          // var wheight = $(window).height();
+          // var top = this.$element.offset().top;
+          // var scroll = $(window).scrollTop();
+          // var eheight =  this.$element.height();
+          // var sub = wheight -  scroll;
+          // console.log("sub is "+sub);
+          // if(sub < 165) 
+          // {
+          //   //$('.clockface').removeClass('up');
+          //   //$('.clockface').addClass('down');
+          //   //$('.clockface').css('bottom') = 'auto';
 
-          }
-          else 
-          {
-            //$('.clockface').removeClass('down');
-            //$('.clockface').addClass('up');
-          }
+          // }
+          // else 
+          // {
+          //   //$('.clockface').removeClass('down');
+          //   //$('.clockface').addClass('up');
+          // }
 
           
 
