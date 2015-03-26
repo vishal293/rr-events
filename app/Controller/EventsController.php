@@ -499,16 +499,16 @@
 				$Gender=$data['Gender'];
 				$AgeG=$data['AgeG'];
 				if($event['notification_to'] == 'All'){
-					$Occp['notification_occupation']= array();
-					$Gender['notification_gender']= array();
-					$AgeG['notification_agegroup']= array();
+					$Occp['notification_occupation']= json_decode("[]");
+					$Gender['notification_gender']= json_decode("[]");
+					$AgeG['notification_agegroup']= json_decode("[]");
 				}
 			}
 			else{
 				$event['notification_to'] = NULL;
-				$Occp['notification_occupation']= '[]';
-				$Gender['notification_gender']= '[]';
-				$AgeG['notification_agegroup']= '[]';
+				$Occp['notification_occupation']= json_decode("[]");
+				$Gender['notification_gender']= json_decode("[]");
+				$AgeG['notification_agegroup']= json_decode("[]");
 			}
 			$newdata = array();
 			$newdata = array_merge($event, $category);
