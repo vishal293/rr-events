@@ -499,16 +499,16 @@
 				$Gender=$data['Gender'];
 				$AgeG=$data['AgeG'];
 				if($event['notification_to'] == 'All'){
-					$Occp['notification_occupation']= json_decode("[]");
-					$Gender['notification_gender']= json_decode("[]");
-					$AgeG['notification_agegroup']= json_decode("[]");
+					$Occp['notification_occupation']= array();
+					$Gender['notification_gender']= array();
+					$AgeG['notification_agegroup']= array();
 				}
 			}
 			else{
 				$event['notification_to'] = NULL;
-				$Occp['notification_occupation']= json_decode("[]");
-				$Gender['notification_gender']= json_decode("[]");
-				$AgeG['notification_agegroup']= json_decode("[]");
+				$Occp['notification_occupation']= NULL;
+				$Gender['notification_gender']= NULL;
+				$AgeG['notification_agegroup']= NULL;
 			}
 			$newdata = array();
 			$newdata = array_merge($event, $category);
@@ -519,7 +519,7 @@
 			foreach($newdata as $k=>$v){
 				$newjson = $jsonDoc->put($k,$v);
 			}
-			//pr($newjson);
+			pr($newjson);
 
 				$newdoc = $shephertz->addItem($collName,$newjson);					
 				$newid = $newdoc->jsonDocList[0]->docId;					
