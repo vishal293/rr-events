@@ -39,7 +39,6 @@
 			$cat=$category->index('CategoryCollection');
 			date_default_timezone_set('Asia/Kolkata');
 			$this->set('cat',$cat);								
-			//$collName = $this->collectionName;
 			$shephertz = new ShephertzApp();			
 			$responses = $shephertz->getSingleItems($collName,$id);
 			$filtered_response = $responses->jsonDocList;
