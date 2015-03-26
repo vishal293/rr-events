@@ -350,7 +350,7 @@
                        
                     </div>                  
                 </div>
- <?php
+<?php
 for ($i = 1; $i <= 10; $i++) {
     $image_id = 'photo_'.$i;    
     $image = $event[$image_id];
@@ -419,135 +419,7 @@ for ($i = 1; $i <= 10; $i++) {
 } 
 
  ?>               
-            <!--    <div class="row">
-                    <div class="col-sm-6">
-                        <div class="form-group pl-15 pr-15">
-                            <label class="control-label ml-0 col-sm-6">Photo 1</label>
-                            <div class="col-sm-4 file-top">
-                                <input type="file" name="data[photo][photo_1]" id="photo_1" title="Upload a Photo Max. 2MB (optional)">
-                                <input type="hidden" name="data[data][photo_1]" id="photo_1_path" class="form-control" value="<?php echo $event['photo_1']; ?>">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div id="photo_1_loader" class="loader">
-                        </div>
-                        <div id="photo_1_output" class="loader"></div>
-                        <?php 
-                            $image = $event['photo_1'];
-
-                            $display = "style='display:block'";
-                            if($image==""): 
-                                $display="style='display:none'";
-                            endif;
-                        ?>
-                        <div class='col-xs-6 col-md-3 loader'>
-                            <a id="photo_1_remove" <?php echo $display; ?> >Remove Image
-                            </a>
-                            <a href="<?php echo $image; ?>" <?php echo $display; ?> 
-                               id="photo_1_link" class="test-popup-link thumbnail">
-                                  <img id="photo_1_display" src="<?php echo $image; ?>" >
-                            </a>
-                        </div>                                  
-                    </div>                                  
-                </div>
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="form-group pl-15 pr-15">
-                            <label class="control-label ml-0 col-sm-6">Photo 2</label>
-                            <div class="col-sm-4 file-top">
-                                <input type="file" name="data[photo][photo_2]" id="photo_2" title="Upload a Photo Max. 2MB (optional)">
-                                <input type="hidden" name="data[data][photo_2]" id="photo_2_path" class="form-control" value="<?php echo $event['photo_2']; ?>">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div id="photo_2_loader" class="loader">
-                        </div>
-                        <div id="photo_2_output" class="loader"></div>
-                        <?php 
-                            $image = $event['photo_2'];
-
-                            $display = "style='display:block'";
-                            if($image==""): 
-                                $display="style='display:none'";
-                            endif;
-                        ?>
-                        <div class='col-xs-6 col-md-3 loader'>
-                            <a id="photo_2_remove" <?php echo $display; ?> >Remove Image
-                            </a>
-                            <a href="<?php echo $image; ?>" <?php echo $display; ?> 
-                               id="photo_2_link" class="test-popup-link thumbnail">
-                                  <img id="photo_2_display" src="<?php echo $image; ?>" >
-                            </a>
-                        </div>                                  
-                    </div>                                  
-                </div>
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="form-group pl-15 pr-15">
-                            <label class="control-label ml-0 col-sm-6">Photo 3</label>
-                            <div class="col-sm-4 file-top">
-                                <input type="file" name="data[photo][photo_3]" id="photo_3" title="Upload a Photo Max. 2MB (optional)">
-                                <input type="hidden" name="data[data][photo_3]" id="photo_3_path" class="form-control" value="<?php echo $event['photo_3']; ?>">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div id="photo_3_loader" class="loader">
-                        </div>
-                        <div id="photo_3_output" class="loader"></div>
-                        <?php 
-                            $image = $event['photo_3'];
-
-                            $display = "style='display:block'";
-                            if($image==""):
-                                 $display="style='display:none'";
-                            endif;
-                             ?>
-                            <div class='col-xs-6 col-md-3 loader'>
-                            <a id="photo_3_remove" <?php echo $display; ?>  >Remove Image
-                                 </a>
-
-                                <a href="<?php echo $image; ?>" <?php echo $display; ?> id="photo_3_link" class="test-popup-link thumbnail">
-                                  <img id="photo_3_display" src="<?php echo $image; ?>" alt="...">
-                                </a>
-                            </div>                                   
-                    </div>                              
-                </div>
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="form-group pl-15 pr-15">
-                            <label class="control-label ml-0 col-sm-6 ">Photo 4</label>
-                            <div class="col-sm-4 file-top">
-                                <input type="file" name="data[photo][photo_4]" id="photo_4" title="Upload a Photo Max. 2MB (optional)">
-                                <input type="hidden" name="data[data][photo_4]" id="photo_4_path" class="form-control" value="<?php echo $event['photo_4']; ?>">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div id="photo_4_loader" class="loader">
-                        </div>
-                        <div id="photo_4_output" class="loader"></div>
-                        <?php 
-                            $image = $event['photo_4'];
-
-                            $display = "style='display:block'";
-                            if($image==""):
-                                 $display="style='display:none'";
-                            endif;
-                        ?>
-                        <div class='col-xs-6 col-md-3 loader'>
-                            <a id="photo_4_remove" <?php echo $display; ?>  >Remove Image
-                            </a>
-                            <a href="<?php echo $image; ?>" <?php echo $display; ?> id="photo_4_link" class="test-popup-link thumbnail">
-                                  <img id="photo_4_display" src="<?php echo $image; ?>" alt="...">
-                            </a>
-                        </div>                                   
-                    </div> 
-                </div>-->
-            </div>    <!-- add-child -->
-        </div><!-- panel-body -->
+            
         <?php 
          $image = $event[$image_id];
         for ($i = 1; $i <= 10; $i++) {
@@ -556,19 +428,10 @@ for ($i = 1; $i <= 10; $i++) {
 }
     if($image!=""){ ?>
     
-   <?php } else{
-        //echo "Not present";
-        //echo $image_id;
-    ?>
-        <!-- <center><a href="javascript:;" onClick="addInput('dynamicInput');">Add more photos</a></center>  -->
-       
-<?php    }
-?>
+   <?php } else{ ?>
         
+<?php } ?> 
     </div>
-    <!-- </div>  -->
-
-    
     <div id="org" class="panel panel-info">
         <div class="panel-heading">
             <b>Organizer Details</b>

@@ -340,109 +340,88 @@
                     <?php endif;?>  
                 </div>                  
             </div>
-            <p class="bg-primary" style="width: 104%; margin-left: -13px; padding-left: 13px;">Photos For Gallery</p> 
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="form-group pl-15 pr-15">
-                        <label class="control-label ml-0 col-sm-6">Photo 1</label>
-                        <div class="col-sm-4 file-top">
-                            <input type="file" name="data[photo][photo_1]" id="photo_1" tabindex ='14' title="Upload a Photo Max. 1mb (optional)">
-                            <input type="hidden" name="data[data][photo_1]" id="photo_1_path" value="<?php echo $event['photo_1']; ?>" class="form-control">    
-                        </div>
+<?php
+for ($i = 1; $i <= 10; $i++) {
+    $image_id = 'photo_'.$i;    
+    $image = $event[$image_id];
+    if($image!=""){ ?>
+        <div class="row">    
+            <div class="col-sm-6">
+                <div class="form-group pl-15 pr-15">
+                    <label class="control-label ml-0 col-sm-6"><?php echo $image_id;?></label>
+                    <div class="col-sm-4 file-top">
+                        <input type="file" name="data[photo][<?php echo $image_id;?>]" id="<?php echo $image_id;?>" title="Upload a Photo Max. 2MB (optional)">
+                        <input type="hidden" name="data[data][<?php echo $image_id;?>]" id="<?php echo $image_id;?>_path" class="form-control" value="<?php echo $image; ?>">
                     </div>
-                </div>
-                <div class="col-sm-6">
-                    <div id="photo_1_loader" class="loader">
-                    </div>
-                    <div id="photo_1_output" class="loader"></div>
-                    </div>
-                    <?php 
-                        $image = $event['photo_1'];
-                        if($image!=""): ?>
-                        <div class='col-xs-6 col-md-3 loader'>
-                            <a href="<?php echo $image; ?>" class="test-popup-link thumbnail">
-                              <img src="<?php echo $image; ?>" alt="...">
-                            </a>
-                        </div>
-                    <?php endif;?>                                        
                 </div>
             </div>
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="form-group pl-15 pr-15">
-                        <label class="control-label ml-0 col-sm-6">Photo 2</label>
-                        <div class="col-sm-4 file-top">
-                            <input type="file" name="data[photo][photo_2]" id="photo_2" title="Upload a Photo Max. 1mb (optional)">
-                            <input type="hidden" name="data[data][photo_2]" id="photo_2_path" class="form-control" value="<?php echo $event['photo_2']; ?>">
-                        </div>
+         
+           <div class="col-sm-6">
+                <div id="<?php echo $image_id;?>_loader" class="loader"></div>
+                <div id="<?php echo $image_id;?>_output" class="loader"></div>
+                <?php 
+                    $display = "style='display:block'";
+                    if($image==""): 
+                        $display="style='display:none'";
+                    endif;
+                ?>
+                <div class="col-xs-6 col-md-3 loader" >
+                    <a id="<?php echo $image_id; ?>_remove" <?php echo $display; ?> >Remove Image
+                                        </a>
+                    <a href="<?php echo $image_id; ?>" <?php echo $display; ?>  id="<?php echo $image_id; ?>_link"  class="test-popup-link thumbnail">
+                         <img id="<?php echo $image_id; ?>_display" src="<?php echo $image; ?>" alt="...">
+                    </a>
+                </div>
+            </div>
+        </div>      
+    <?php } else{?>
+       <div class="row">    
+            <div class="col-sm-6">
+                <div class="form-group pl-15 pr-15">
+                    <label class="control-label ml-0 col-sm-6"><?php echo $image_id;?></label>
+                    <div class="col-sm-4 file-top">
+                        <input type="file" name="data[photo][<?php echo $image_id;?>]" id="<?php echo $image_id;?>" title="Upload a Photo Max. 2MB (optional)">
+                        <input type="hidden" name="data[data][<?php echo $image_id;?>]" id="<?php echo $image_id;?>_path" class="form-control" value="">
                     </div>
                 </div>
-                <div class="col-sm-6">
-                    <div id="photo_2_loader" class="loader">
-                    </div>
-                    <div id="photo_2_output" class="loader"></div>
-                    <?php 
-                        $image = $event['photo_2'];
-                        if($image!=""): ?>
-                        <div class='col-xs-6 col-md-3 loader'>
-                           <a href="<?php echo $image; ?>" class="test-popup-link thumbnail">
-                              <img src="<?php echo $image; ?>" alt="...">
-                            </a>
-                        </div>
-                    <?php endif;?>                                     
-                </div>                                  
             </div>
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="form-group pl-15 pr-15">
-                        <label class="control-label ml-0 col-sm-6">Photo 3</label>
-                        <div class="col-sm-4 file-top">
-                            <input type="file" name="data[photo][photo_3]" id="photo_3" title="Upload a Photo Max. 1mb (optional)">
-                            <input type="hidden" name="data[data][photo_3]" id="photo_3_path" class="form-control" value="<?php echo $event['photo_3']; ?>">
-                        </div>
-                    </div>
+         
+           <div class="col-sm-6">
+                <div id="<?php echo $image_id;?>_loader" class="loader"></div>
+                <div id="<?php echo $image_id;?>_output" class="loader"></div>
+                <?php 
+                    $display = "style='display:block'";
+                    if($image==""): 
+                        $display="style='display:none'";
+                    endif;
+                ?>
+                <div class="col-xs-6 col-md-3 loader" >
+                    <a id="<?php echo $image_id; ?>_remove" <?php echo $display; ?> >Remove Image
+                                        </a>
+                    <a href="<?php echo $image_id; ?>" <?php echo $display; ?>  id="<?php echo $image_id; ?>_link"  class="test-popup-link thumbnail">
+                         <img id="<?php echo $image_id; ?>_display" src="" alt="...">
+                    </a>
                 </div>
-                <div class="col-sm-6">
-                    <div id="photo_3_loader" class="loader">
-                    </div>
-                    <div id="photo_3_output" class="loader"></div>
-                    <?php 
-                        $image = $event['photo_3'];
-                        if($image!=""): ?>
-                        <div class='col-xs-6 col-md-3 loader'>
-                            <a href="<?php echo $image; ?>" class="test-popup-link thumbnail">
-                              <img src="<?php echo $image; ?>" alt="...">
-                            </a>
-                        </div>
-                    <?php endif;?>                                     
-                </div>                              
             </div>
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="form-group pl-15 pr-15">
-                        <label class="control-label ml-0 col-sm-6 ">Photo 4</label>
-                        <div class="col-sm-4 file-top">
-                            <input type="file" name="data[photo][photo_4]" id="photo_4" title="Upload a Photo Max. 1mb (optional)">
-                            <input type="hidden" name="data[data][photo_4]" id="photo_4_path" class="form-control" value="<?php echo $event['photo_4']; ?>">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div id="photo_4_loader" class="loader">
-                    </div>
-                    <div id="photo_4_output" class="loader"></div>
-                    <?php 
-                        $image = $event['photo_4'];
-                        if($image!=""): ?>
-                        <div class='col-xs-6 col-md-3 loader'>
-                           <a href="<?php echo $image; ?>" class="test-popup-link thumbnail">
-                              <img src="<?php echo $image; ?>" alt="...">
-                            </a>
-                        </div>
-                    <?php endif;?>                                     
-                </div> 
-            </div>
-        <!-- </div> -->
+        </div>      
+<?php    }
+
+} 
+
+ ?>               
+            
+        <?php 
+         $image = $event[$image_id];
+        for ($i = 1; $i <= 10; $i++) {
+    $image_id = 'photo_'.$i;   
+   
+}
+    if($image!=""){ ?>
+    
+   <?php } else{ ?>
+        
+<?php } ?> 
+            
     </div> 
     
     <div class="panel panel-info">
