@@ -463,9 +463,6 @@
 
 		public function ajax_add(){
 			$data=$this->data;
-			$Occp=$data['Occp'];
-			$Gender=$data['Gender'];
-			$AgeG=$data['AgeG'];
 			$collName = $this->collectionName;	
 			$shephertz = new ShephertzApp();
 			$jsonDoc = new JSONObject(); 
@@ -498,11 +495,23 @@
 			}
 
 			if($event['plan'] == 'Diamond'){
+				$Occp=$data['Occp'];
+				$Gender=$data['Gender'];
+				$AgeG=$data['AgeG'];
+				if($event['notification_to'] == 'All'){
+					$Occp['notification_occupation']= array();
+					$Gender['notification_gender']= array();
+					$AgeG['notification_agegroup']= array();
+				}
+			}else{
+				$event['notification_to'] = NULL;
+				$Occp['notification_occupation']= array();
+				$Gender['notification_gender']= array();
+				$AgeG['notification_agegroup']= array();
+			}
 			$newdata = array_merge($newdata, $Occp);
 			$newdata = array_merge($newdata, $Gender);
-			$newdata = array_merge($newdata, $AgeG);	
-			}
-			
+			$newdata = array_merge($newdata, $AgeG);
 			$newdata = array_merge($event, $category);
 			
 			foreach($newdata as $k=>$v){
@@ -559,23 +568,30 @@
 
 									
 			$category=$data['cat'];	
-					
-			if($event['notification_to'] == 'All'){
-				$Occp['notification_occupation']= array();
-				$Gender['notification_gender']= array();
-				$AgeG['notification_agegroup']= array();
-			}
 
 			if($event['offer'] == 'Offer'){
 				$collName = 'OfferCollection';
 			}
-				if($event['plan'] == 'Diamond'){
+			if($event['plan'] == 'Diamond'){
+				$Occp=$data['Occp'];
+				$Gender=$data['Gender'];
+				$AgeG=$data['AgeG'];
+				if($event['notification_to'] == 'All'){
+					$Occp['notification_occupation']= array();
+					$Gender['notification_gender']= array();
+					$AgeG['notification_agegroup']= array();
+				}
+			}else{
+				$event['notification_to'] = NULL;
+				$Occp['notification_occupation']= array();
+				$Gender['notification_gender']= array();
+				$AgeG['notification_agegroup']= array();
+			}
 			$newdata = array_merge($newdata, $Occp);
 			$newdata = array_merge($newdata, $Gender);
-			$newdata = array_merge($newdata, $AgeG);	
-			}
-			
+			$newdata = array_merge($newdata, $AgeG);
 			$newdata = array_merge($event, $category);
+			
 			foreach($newdata as $k=>$v){
 				$newjson = $jsonDoc->put($k,$v);
 			}
