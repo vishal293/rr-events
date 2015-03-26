@@ -519,6 +519,7 @@
 			foreach($newdata as $k=>$v){
 				$newjson = $jsonDoc->put($k,$v);
 			}
+			pr($newjson);
 
 				$newdoc = $shephertz->addItem($collName,$newjson);					
 				$newid = $newdoc->jsonDocList[0]->docId;					
