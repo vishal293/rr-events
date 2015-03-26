@@ -101,15 +101,15 @@
           console.log("sub is "+sub);
           if(sub < 165) 
           {
-            $('.clockface').removeClass('up');
-            $('.clockface').addClass('down');
+            //$('.clockface').removeClass('up');
+            //$('.clockface').addClass('down');
             //$('.clockface').css('bottom') = 'auto';
 
           }
           else 
           {
-             $('.clockface').removeClass('down');
-            $('.clockface').addClass('up');
+            //$('.clockface').removeClass('down');
+            //$('.clockface').addClass('up');
           }
 
           
