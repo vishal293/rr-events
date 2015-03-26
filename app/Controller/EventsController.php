@@ -424,8 +424,6 @@
 			$docid = $this->data['data']['id'];
 			$data=$this->data['data'];
 			
-			// pr($data);
-			// exit;
 			date_default_timezone_set('UTC');
 			$data['updated_on'] = $shephertz->getUTCtime();
 			$data['start_time'] = date("H:i", strtotime($data['start_time']));
@@ -497,12 +495,13 @@
 
 			if($event['offer'] == 'Offer'){
 				$collName = 'OfferCollection';
-			}	
-			
-			$newdata = array_merge($event, $category);
+			}else{
 			$newdata = array_merge($newdata, $Occp);
 			$newdata = array_merge($newdata, $Gender);
 			$newdata = array_merge($newdata, $AgeG);
+			}	
+			
+			$newdata = array_merge($event, $category);
 			
 			foreach($newdata as $k=>$v){
 				$newjson = $jsonDoc->put($k,$v);
@@ -565,17 +564,18 @@
 				$AgeG['notification_agegroup']= array();
 			}
 
+			if($event['offer'] == 'Offer'){
+				$collName = 'OfferCollection';
+			}else{
+				$newdata = array_merge($newdata, $Occp);
+				$newdata = array_merge($newdata, $Gender);
+				$newdata = array_merge($newdata, $AgeG);
+			}
 			$newdata = array_merge($event, $category);
-			$newdata = array_merge($newdata, $Occp);
-			$newdata = array_merge($newdata, $Gender);
-			$newdata = array_merge($newdata, $AgeG);
 			foreach($newdata as $k=>$v){
 				$newjson = $jsonDoc->put($k,$v);
 			}
 
-			if($event['offer'] == 'Offer'){
-				$collName = 'OfferCollection';
-			}
 					
 			if($shephertz->editItem($collName,$docid,$newjson)){
 			 	if($event['offer'] == 'Offer'){
