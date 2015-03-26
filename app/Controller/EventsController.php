@@ -423,7 +423,7 @@
 			$jsonDoc = new JSONObject();
 			$docid = $this->data['data']['id'];
 			$data=$this->data['data'];
-			
+
 			date_default_timezone_set('UTC');
 			$data['updated_on'] = $shephertz->getUTCtime();
 			$data['start_time'] = date("H:i", strtotime($data['start_time']));
@@ -495,11 +495,13 @@
 
 			if($event['offer'] == 'Offer'){
 				$collName = 'OfferCollection';
-			}else{
+			}
+
+			if($event['plan'] == 'Diamond'){
 			$newdata = array_merge($newdata, $Occp);
 			$newdata = array_merge($newdata, $Gender);
-			$newdata = array_merge($newdata, $AgeG);
-			}	
+			$newdata = array_merge($newdata, $AgeG);	
+			}
 			
 			$newdata = array_merge($event, $category);
 			
@@ -566,11 +568,13 @@
 
 			if($event['offer'] == 'Offer'){
 				$collName = 'OfferCollection';
-			}else{
-				$newdata = array_merge($newdata, $Occp);
-				$newdata = array_merge($newdata, $Gender);
-				$newdata = array_merge($newdata, $AgeG);
 			}
+				if($event['plan'] == 'Diamond'){
+			$newdata = array_merge($newdata, $Occp);
+			$newdata = array_merge($newdata, $Gender);
+			$newdata = array_merge($newdata, $AgeG);	
+			}
+			
 			$newdata = array_merge($event, $category);
 			foreach($newdata as $k=>$v){
 				$newjson = $jsonDoc->put($k,$v);
