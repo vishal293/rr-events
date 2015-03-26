@@ -599,11 +599,11 @@
 			$newdata = array_merge($newdata, $Occp);
 			$newdata = array_merge($newdata, $Gender);
 			$newdata = array_merge($newdata, $AgeG);
-
+			pr($newdata);
 			foreach($newdata as $k=>$v){
 				$newjson = $jsonDoc->put($k,$v);
 			}
-	
+			pr($newjson);
 			if($shephertz->editItem($collName,$docid,$newjson)){
 			 	if($event['offer'] == 'Offer'){
 					echo json_encode('view_offer/'.$docid);
