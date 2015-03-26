@@ -503,12 +503,14 @@
 					$Gender['notification_gender']= array();
 					$AgeG['notification_agegroup']= array();
 				}
-			}else{
+			}
+			else{
 				$event['notification_to'] = NULL;
 				$Occp['notification_occupation']= array();
 				$Gender['notification_gender']= array();
 				$AgeG['notification_agegroup']= array();
 			}
+			$newdata = array();
 			$newdata = array_merge($newdata, $Occp);
 			$newdata = array_merge($newdata, $Gender);
 			$newdata = array_merge($newdata, $AgeG);
@@ -587,11 +589,12 @@
 				$Gender['notification_gender']= array();
 				$AgeG['notification_agegroup']= array();
 			}
+			$newdata = array();
 			$newdata = array_merge($newdata, $Occp);
 			$newdata = array_merge($newdata, $Gender);
 			$newdata = array_merge($newdata, $AgeG);
 			$newdata = array_merge($event, $category);
-			
+
 			foreach($newdata as $k=>$v){
 				$newjson = $jsonDoc->put($k,$v);
 			}
