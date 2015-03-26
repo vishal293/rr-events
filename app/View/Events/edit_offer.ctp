@@ -574,6 +574,90 @@
                     </div>
                 </div>
             </div>
+            <div class="row" id="SendNotyToR">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" style="margin-left:0;">Send Notification to </label>
+                        <div class="col-sm-5 " style="padding-left:9px;">
+                            <label class="radio-inline" style="margin-left:-1px;">
+                                <?php 
+                                $notification_to = $event['notification_to'];
+                                ?>
+                                <input type="radio" name="data[data][notification_to]" id="notifytoAll" value="All" <?php if($notification_to == 'All') echo "checked"; ?>>All
+                            </label>
+                            <label class="radio-inline" >
+                                <input type="radio" name="data[data][notification_to]" id="notifytoCustomiz" value="Customized" <?php if($notification_to == 'Customized') echo "checked"; ?>>Customized
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+            <div class="row" id="SendNotyTo" style="display:none;">
+                <div class="col-sm-12">
+                    <?php $occupations = $event['notification_occupation']; ?>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3 margin_left">Occupations</label>
+                        <div id="getoccupations" class="col-md-9" style="padding: 0 0 0 6px;">
+                            <label class="checkbox-inline col-sm-4" style="margin-left: 0px;">
+                                <input id="data[Occp][notification_occupation]" class="require-one" type="checkbox" value="Business/Employed" name="data[Occp][notification_occupation][]" <?php if(in_array('Business/Employed', $occupations)){ echo "checked";}?>>
+                                Business/Employed
+                            </label>
+                            <label class="checkbox-inline col-sm-4" style="margin-left: 0px;">
+                                <input id="data[Occp][notification_occupation]" class="require-one" type="checkbox" value="Professional" name="data[Occp][notification_occupation][]" <?php if(in_array('Professional', $occupations)){ echo "checked";}?>>
+                                Professional
+                            </label>
+                            <label class="checkbox-inline col-sm-4" style="margin-left: 0px;">
+                                <input id="data[Occp][notification_occupation]" class="require-one" type="checkbox" value="Housewife" name="data[Occp][notification_occupation][]" <?php if(in_array('Housewife', $occupations)){ echo "checked";}?>>
+                                Housewife
+                            </label>
+                            <label class="checkbox-inline col-sm-4" style="margin-left: 0px;">
+                                <input id="data[Occp][notification_occupation]" class="require-one" type="checkbox" value="Student" name="data[Occp][notification_occupation][]" <?php if(in_array('Student', $occupations)){ echo "checked";}?>>
+                                Student
+                            </label>
+                            <label class="checkbox-inline col-sm-4" style="margin-left: 0px;">    
+                                <input id="data[Occp][notification_occupation]" class="require-one" type="checkbox" value="Others" name="data[Occp][notification_occupation][]" <?php if(in_array('Others', $occupations)){ echo "checked";}?>>
+                                Others
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="form-group">
+                    <?php $gender = $event['notification_gender']; ?>
+                        <label class="control-label col-sm-3 margin_left">Gender</label>
+                        <div id="getoccupations" class="col-md-9" style="padding: 0 0 0 6px;">
+                            <label class="checkbox-inline col-sm-4" style="margin-left: 0px;">
+                                <input id="data[Gender][notification_gender]" class="require-one" type="checkbox" value="Male" name="data[Gender][notification_gender][]" <?php if(in_array('Male', $gender)){ echo "checked";}?>>
+                                Male
+                            </label>
+                            <label class="checkbox-inline col-sm-4" style="margin-left: 0px;">
+                                <input id="data[Gender][notification_gender]" class="require-one" type="checkbox" value="Female" name="data[Gender][notification_gender][]" <?php if(in_array('Female', $gender)){ echo "checked";}?>>
+                                Female
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="form-group">
+                    <?php $age_group = $event['notification_agegroup']; ?>
+                        <label class="control-label col-sm-3 margin_left">Age-group</label>
+                        <div id="getoccupations" class="col-md-9" style="padding: 0 0 0 6px;">
+                            <label class="checkbox-inline col-sm-4" style="margin-left: 0px;">
+                                <input id="data[AgeG][notification_agegroup]" class="require-one" type="checkbox" value="1" name="data[AgeG][notification_agegroup][]" <?php if(in_array('1', $age_group)){ echo "checked";}?>>
+                                18-30
+                            </label>
+                            <label class="checkbox-inline col-sm-4" style="margin-left: 0px;">
+                                <input id="data[AgeG][notification_agegroup]" class="require-one" type="checkbox" value="2" name="data[AgeG][notification_agegroup][]" <?php if(in_array('2', $age_group)){ echo "checked";}?>>
+                                31-50
+                            </label>
+                            <label class="checkbox-inline col-sm-4" style="margin-left: 0px;">
+                                <input id="data[AgeG][notification_agegroup]" class="require-one" type="checkbox" value="3" name="data[AgeG][notification_agegroup][]" <?php if(in_array('3', $age_group)){ echo "checked";}?>>
+                                51+
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div id="process" style="display:none;">
