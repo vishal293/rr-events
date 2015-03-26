@@ -1,6 +1,6 @@
   
 $(':file').change(function(ev) {
-    console.log('on file upload');
+    // console.log('on file upload');
     var ipname = $(this)[0]['id'];
     if( $('#'+ipname).val()){
       ajax_pic_upload(ipname);                  
@@ -32,18 +32,18 @@ function ajax_pic_upload(ipname) {
     mainURL = document.URL;
     var url = mainURL.split("/");
     var module = url[3];
-    console.log(module);
+    // console.log(module);
     if(module == "categories")
     {
         var url = config.category+'/ajax_upload_image';
         var formData = new FormData($('#categoryform')[0]);
         formData.append('inputfield',ipname);
-        console.log(formData);
+        //// console.log(formData);
     }
     else if(module == "events")
     {
       var url = config.globalpath+'/ajax_upload_image';
-      console.log(url);
+      // console.log(url);
       var formData = new FormData($('#eventform')[0]);
         formData.append('inputfield',ipname);
     }
@@ -64,7 +64,7 @@ function ajax_pic_upload(ipname) {
             beforeSubmit(ipname);
 		},			
         success: function(resp){
-            console.log(resp);
+            // console.log(resp);
             var ret = jQuery.parseJSON(resp);
             
             if(ret._error == "error"){
@@ -73,7 +73,7 @@ function ajax_pic_upload(ipname) {
                 $('#'+ipname+'_output').html("<p class='text-danger'>Cannot Upload image.</p>");
              }
             else{   
-                console.log(ret);
+                // console.log(ret);
                 $('#'+ipname+'_link').attr("style","display:block");
                 $('#'+ipname+'_path').val(ret._path);
                 $('#'+ipname+'_link').attr("href",ret._path);   

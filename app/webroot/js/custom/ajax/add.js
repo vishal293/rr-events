@@ -23,7 +23,7 @@ $(":input").click(function(event){
     $("input, select, textarea, button").each(function(){
     var required_attr = $(this).attr('required');
     var current_id = $(this).attr('id');
-        if(ff != $(this).attr('id') && i == 0 && required_attr == 'required'){
+        if(ff != $(this).attr('id') && i == 0 && required_attr == 'required' && type != 'button'){
             var input = $(this).attr('id');
             var value = $('#'+input).val();
             var category = $("input[name='data[cat][category_id][]']:checked").val();
