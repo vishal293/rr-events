@@ -535,7 +535,7 @@ for ($i = 1; $i <= 10; $i++) {
                             <label class="control-label col-md-4">Notification To:</label>
                             <div class="col-md-5">
                                 <p>
-                                    <?php if($event['notification_to'] == 'All'){ echo "All"; }else{ echo "Customized send"; } ?>                          
+                                    <?php if($event['notification_to'] == 'All'){ echo "All"; }else{ echo "Customized set"; } ?>                          
                                 </p>
                             </div>
                     </div>
