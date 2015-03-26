@@ -462,11 +462,11 @@
 		}
 
 		public function ajax_add(){
-			$data=$this->data;
 			$collName = $this->collectionName;	
 			$shephertz = new ShephertzApp();
 			$jsonDoc = new JSONObject(); 
 			date_default_timezone_set('UTC');
+			$data=$this->data;
 			$event=array();
 			$event=$data['data'];
 			$event['approved'] = '0';
@@ -511,14 +511,15 @@
 				$AgeG['notification_agegroup']= array();
 			}
 			$newdata = array();
+			$newdata = array_merge($event, $category);
 			$newdata = array_merge($newdata, $Occp);
 			$newdata = array_merge($newdata, $Gender);
 			$newdata = array_merge($newdata, $AgeG);
-			$newdata = array_merge($event, $category);
 			
 			foreach($newdata as $k=>$v){
 				$newjson = $jsonDoc->put($k,$v);
 			}
+
 				$newdoc = $shephertz->addItem($collName,$newjson);					
 				$newid = $newdoc->jsonDocList[0]->docId;					
 			if($newdoc){
@@ -543,14 +544,11 @@
 		}
 
 		public function ajax_edit(){
-			$data=$this->data;
-			$Occp=$data['Occp'];
-			$Gender=$data['Gender'];
-			$AgeG=$data['AgeG'];
 			$collName = $this->collectionName;
 			$shephertz = new ShephertzApp();
 			$jsonDoc = new JSONObject();
 			date_default_timezone_set('UTC');
+			$data=$this->data;
 			$docid = $data['id'];
 			$event=array();
 			$event=$data['data'];
@@ -590,10 +588,10 @@
 				$AgeG['notification_agegroup']= array();
 			}
 			$newdata = array();
+			$newdata = array_merge($event, $category);
 			$newdata = array_merge($newdata, $Occp);
 			$newdata = array_merge($newdata, $Gender);
 			$newdata = array_merge($newdata, $AgeG);
-			$newdata = array_merge($event, $category);
 
 			foreach($newdata as $k=>$v){
 				$newjson = $jsonDoc->put($k,$v);
