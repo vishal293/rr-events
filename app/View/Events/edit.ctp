@@ -208,7 +208,7 @@
                             <div class="input-group time col-sm-6" style="padding-left: 12px;">
                                 <input name="data[data][start_time]" readonly type="text" class="form-control input-sm disTime" tabindex ='7' id="start_time" value="<?php echo $event['start_time']; ?>" required aria-describedby="start_time_btn">
                                  <span class="input-group-btn">
-                                        <button class="btn default btn-sm picker" type="button" id="end_time_btn">
+                                        <button class="btn default btn-sm picker" type="button" id="start_time_btn">
                                             <i class="fa fa-clock-o"></i>
                                         </button>
                                     </span>
