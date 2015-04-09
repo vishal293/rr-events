@@ -113,12 +113,12 @@ $(".photo_upload").click(function(event){
         if($(this).attr('ex') == 'photo_upload'){
             if($('#photo_'+bnid).val() == ''){
                 event.preventDefault();
-                alert('Please select previouse photo first');
+                alert('Please select previous photo first');
                 return false;
             }
         }else{
             event.preventDefault();
-            alert('Please select previouse photo first');
+            alert('Please select previous photo first');
             return false;
         }
     }

@@ -19,7 +19,7 @@ $(".photo_upload").click(function(event){
     var bnid = parseInt(nid - 1);
     if($('#photo_'+bnid).val() == ''){
         event.preventDefault();
-        alert('Please select previouse photo first');
+        alert('Please select previous photo first');
         return false;
     }
     if(nid >= 4){
