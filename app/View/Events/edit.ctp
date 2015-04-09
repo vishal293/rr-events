@@ -360,7 +360,7 @@ for ($i = 1; $i <= 10; $i++) {
                 <div class="form-group pl-15 pr-15">
                     <label class="control-label ml-0 col-sm-6"><?php echo $image_id;?></label>
                     <div class="col-sm-4 file-top">
-                        <input type="file" name="data[photo][<?php echo $image_id;?>]" id="<?php echo $image_id;?>" title="Upload a Photo Max. 2MB (optional)">
+                        <input type="file" name="data[photo][<?php echo $image_id;?>]" id="<?php echo $image_id;?>" title="Upload a Photo Max. 2MB (optional)" class="photo_upload">
                         <input type="hidden" name="data[data][<?php echo $image_id;?>]" id="<?php echo $image_id;?>_path" class="form-control" value="<?php echo $image; ?>">
                     </div>
                 </div>
@@ -390,7 +390,7 @@ for ($i = 1; $i <= 10; $i++) {
                 <div class="form-group pl-15 pr-15">
                     <label class="control-label ml-0 col-sm-6"><?php echo $image_id;?></label>
                     <div class="col-sm-4 file-top">
-                        <input type="file" name="data[photo][<?php echo $image_id;?>]" id="<?php echo $image_id;?>" title="Upload a Photo Max. 2MB (optional)">
+                        <input type="file" name="data[photo][<?php echo $image_id;?>]" id="<?php echo $image_id;?>" title="Upload a Photo Max. 2MB (optional)" class="photo_upload" ex="photo_upload">
                         <input type="hidden" name="data[data][<?php echo $image_id;?>]" id="<?php echo $image_id;?>_path" class="form-control" value="">
                     </div>
                 </div>
@@ -419,18 +419,6 @@ for ($i = 1; $i <= 10; $i++) {
 } 
 
  ?>               
-            
-        <?php 
-         $image = $event[$image_id];
-        for ($i = 1; $i <= 10; $i++) {
-    $image_id = 'photo_'.$i;   
-   
-}
-    if($image!=""){ ?>
-    
-   <?php } else{ ?>
-        
-<?php } ?> 
     </div>
     <div id="org" class="panel panel-info">
         <div class="panel-heading">

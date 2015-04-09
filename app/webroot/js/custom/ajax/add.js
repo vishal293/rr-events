@@ -9,7 +9,24 @@ $(document).ready(function() {
     $('#submit').click(function(e) {
         warnMessage = null;
     });
-});  
+}); 
+
+// code for handeling photos upload
+$(".photo_upload").click(function(event){
+    var pid = $(this).attr('id');
+    var nid = pid.split("_");
+    var nid = parseInt(nid[1]);
+    var bnid = parseInt(nid - 1);
+    if($('#photo_'+bnid).val() == ''){
+        event.preventDefault();
+        alert('Please select previouse photo first');
+        return false;
+    }
+    if(nid >= 4){
+        $('#addmorephoto').show();
+    }
+});
+
 
 // New code added for validation msg
 $(":input").click(function(event){

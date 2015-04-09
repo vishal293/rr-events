@@ -56,5 +56,21 @@
 			$this->render(false);
 		}
 
+		public function getAllAgeGroupAppUser(){
+			$collName = 'ProfileDataCollection';
+			$shephertz = new ShephertzApp();
+			$selectKeys = array('Gender','Year_Of_Birth');  
+			$responses = $shephertz->getDocCount($collName,$selectKeys);
+			$jsondoc = $responses->getJsonDocList();
+			$i=0;
+			$doc = array();
+			foreach($jsondoc as $j){
+				$doc[$i] = $j->getJsonDoc();
+				$i++;
+			}
+			echo json_encode($doc);
+			exit;
+		}
+
 	}
 ?>

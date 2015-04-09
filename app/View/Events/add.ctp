@@ -375,7 +375,7 @@
                     <div class="form-group">
                         <label class="control-label col-sm-6 desc">Photo 1</label>
                         <div class="col-sm-4 file-top">
-                            <input type="file" name="data[photo][photo_1]" id="photo_1" tabindex ='16' title="Upload a Photo Max. 2MB (optional)">
+                            <input type="file" name="data[photo][photo_1]" id="photo_1" tabindex ='16' title="Upload a Photo Max. 2MB (optional)" class="photo_upload">
                             <input type="hidden" name="data[data][photo_1]" id="photo_1_path" class="form-control"> 
                         </div>
                     </div>
@@ -399,7 +399,7 @@
                     <div class="form-group">
                         <label class="control-label col-sm-6 desc">Photo 2</label>
                         <div class="col-sm-4 file-top">
-                            <input type="file" name="data[photo][photo_2]" id="photo_2" tabindex ='17' title="Upload a Photo Max. 2MB (optional)">
+                            <input type="file" name="data[photo][photo_2]" id="photo_2" tabindex ='17' title="Upload a Photo Max. 2MB (optional)" class="photo_upload">
                             <input type="hidden" name="data[data][photo_2]" id="photo_2_path" class="form-control"> 
                         </div>
                     </div>
@@ -423,7 +423,7 @@
                     <div class="form-group">
                         <label class="control-label col-sm-6 desc">Photo 3</label>
                         <div class="col-sm-4 file-top">
-                            <input type="file" name="data[photo][photo_3]" id="photo_3" tabindex ='18' title="Upload a Photo Max. 2MB (optional)">
+                            <input type="file" name="data[photo][photo_3]" id="photo_3" tabindex ='18' title="Upload a Photo Max. 2MB (optional)" class="photo_upload">
                             <input type="hidden" name="data[data][photo_3]" id="photo_3_path" class="form-control"> 
                         </div>
                     </div>
@@ -447,7 +447,7 @@
                     <div class="form-group">
                         <label class="control-label col-sm-6 desc">Photo 4</label>
                         <div class="col-sm-4 file-top">
-                            <input type="file" name="data[photo][photo_4]" id="photo_4" tabindex ='19' title="Upload a Photo Max. 2MB (optional)">
+                            <input type="file" name="data[photo][photo_4]" id="photo_4" tabindex ='19' title="Upload a Photo Max. 2MB (optional)" class="photo_upload">
                             <input type="hidden" name="data[data][photo_4]" id="photo_4_path" class="form-control"> 
                         </div>
                     </div>
@@ -468,7 +468,7 @@
             </div>
 
         </div>
-        <center><a href="javascript:;" onClick="addInput('dynamicInput');">Add more photos</a></center>
+        <center><a id="addmorephoto" href="javascript:;" onClick="addInput('dynamicInput');" style="display:none;">Add more photos</a></center>
         </div>
         
         
@@ -754,10 +754,11 @@
 var counter = 4;
 var limit = 10;
 function addInput(divName){ 
-     if (counter == limit)  {
-          alert("Maximum upload limit " + counter);
-     }
-     else {
+    // $( ":input" ).trigger( "click" );
+    if (counter == limit)  {
+        alert("Maximum upload limit " + counter);
+    }
+    else {
           var rowdiv = document.createElement('div');
           rowdiv.setAttribute("class", "row");
 
@@ -799,7 +800,7 @@ function addInput(divName){
           colforthdiv.setAttribute("class", "col-sm-4 file-top");
           colthirddiv.appendChild(colforthdiv);
 
-          colforthdiv.innerHTML = '<input type="file" name="data[photo][photo_'+ (counter + 1) +']" id="photo_'+ (counter + 1) +'" tabindex ="19" title="Upload a Photo Max. 2MB (optional)">';
+          colforthdiv.innerHTML = '<input type="file" name="data[photo][photo_'+ (counter + 1) +']" id="photo_'+ (counter + 1) +'" tabindex ="19" title="Upload a Photo Max. 2MB (optional)"  class="photo_upload">';
           colforthdiv.innerHTML += '<input type="hidden" name="data[data][photo_'+ (counter + 1) +']" id="photo_'+ (counter + 1) +'_path" class="form-control">';     
 
                colseventhdiv.innerHTML =" <a id='photo_"+(counter + 1)+"_remove' style='display:none;' >Remove Image</a>";

@@ -41,8 +41,17 @@
                 </button>
                 <a class="navbar-brand"><font size="5">CityBuzz</font></a>
             </div>
+            <!-- <div>
+                
+            </div> -->
             <!-- /.navbar-header -->
             <ul class="nav navbar-top-links navbar-right">
+                <li style="margin-right: 85px;">
+                    <?php 
+                    $dt = new DateTime();
+                    echo $dt->format('d-m-Y g:i A');
+                    ?>
+                </li>
                 <li>
                     Logged in as
                     <?php echo $curr_user['name']; ?>

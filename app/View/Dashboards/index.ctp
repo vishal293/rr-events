@@ -54,12 +54,30 @@
        		</div>
 		</div>
 	</div>
+  <div class="col-lg-5">
+    <div class="panel panel-info">
+      <div class="panel-heading">
+              <b>App Users by Age group</b>                           
+          </div>
+          <div class="panel-body">
+                <div class="dataTable_wrapper" id="agegroup">
+                  <center>
+                        <?php 
+                        echo $this->Html->image('ajax-loader.gif',array('id'=>'agegrouploader')
+                        ); 
+                        ?> 
+                    </center>
+            </div>
+          </div>
+    </div>
+  </div>
 </div>
 <?php 
 	echo $this->Html->script(array('jquery.dataTables',
 									'custom/ajax/dashboard/getAllAppUsers',
 									'custom/ajax/dashboard/getAllEvents',
-									'custom/ajax/dashboard/getAllOffers'
+                  'custom/ajax/dashboard/getAllAgeGroupAppUser',
+                  'custom/ajax/dashboard/getAllOffers'
 								)
 	);
 ?>

@@ -102,6 +102,31 @@ $('#notifytoAll').change(function(){
     }
 });
 
+// code for handeling photos upload
+$(".photo_upload").click(function(event){
+    console.log('I am called Here');
+    var pid = $(this).attr('id');
+    var nid = pid.split("_");
+    var nid = parseInt(nid[1]);
+    var bnid = parseInt(nid - 1);
+    if($('#photo_'+bnid+'_path').val() == ''){
+        if($(this).attr('ex') == 'photo_upload'){
+            if($('#photo_'+bnid).val() == ''){
+                event.preventDefault();
+                alert('Please select previouse photo first');
+                return false;
+            }
+        }else{
+            event.preventDefault();
+            alert('Please select previouse photo first');
+            return false;
+        }
+    }
+    if(nid >= 4){
+        $('#addmorephoto').show();
+    }
+});
+
 $('#submit').click(function(){
     var category = $("input[name='data[cat][category_id][]']:checked").val();
     var notifyto = $("input[name='data[data][notification_to]']:checked").val();

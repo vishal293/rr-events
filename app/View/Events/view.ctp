@@ -522,16 +522,6 @@ for ($i = 1; $i <= 10; $i++) {
                 </div>
                 <div class="row">
                    <div class="form-group">
-                            <label class="control-label col-md-4">Message:</label>
-                            <div class="col-md-5">
-                                <p>
-                                    <?php echo $event['notif_msg']; ?>                          
-                                </p>
-                            </div>
-                    </div>
-                </div>
-                <div class="row">
-                   <div class="form-group">
                             <label class="control-label col-md-4">Notification To:</label>
                             <div class="col-md-5">
                                 <p>

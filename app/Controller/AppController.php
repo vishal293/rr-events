@@ -39,6 +39,7 @@ class AppController extends Controller {
     }
     
 	public function beforeRender(){
+		date_default_timezone_set('Asia/Kolkata');
 	 	$logged_in = $this->Auth->loggedIn();
 	    if( ($logged_in) && ($this->action == 'login') ) {
 	        $this->redirect(array('controller' => 'dashboards', 'action' => 'index'));	
