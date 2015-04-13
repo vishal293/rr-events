@@ -143,7 +143,7 @@
 			}
 		}
 
-		public function edit($id = ""){
+		public function changepassword($id = ""){
 			if(!$id){
 				$this->Session->setFlash('Invalid User');
 				$this->redirect(array('controller'=>'users','action'=>'index'));
