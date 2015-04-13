@@ -151,7 +151,8 @@
 
 			if($this->request->is('post')){
 				if($this->User->save($this->request->data)){
-					$this->Session->setFlash('password updated');
+					$userName = $this->User->findById($id);
+					$this->Session->setFlash('password updated for user '.$userName['User']['email']);
 					$this->redirect(array('controller'=>'users','action'=>'index'));
 				}
 			}
