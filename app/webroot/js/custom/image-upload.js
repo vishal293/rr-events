@@ -80,8 +80,10 @@ function ajax_pic_upload(ipname) {
                      // $('#'+ipname+'_loader').html("<img src='"+baseUrl+"img/tick.png' alt='sucess'>");        
                     $('#'+ipname+'_opt').attr({src :resp._path,
                                             style: 'height:150px; width:220px;'
-                                            });    
-                    // $('#'+ipname+'_remove').attr("style","display:block");
+                                            }); 
+                    if($('#'+ipname+'_display').attr('src') != ''){
+                        $('#'+ipname+'_remove').attr("style","display:block");
+                    }   
                 }                     
             }
 		},
