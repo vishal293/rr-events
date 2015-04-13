@@ -18,8 +18,8 @@
 				echo $this->Form->input('id');
 			?>
 			<div class="form-group col-md-12">
-				<label class="col-md-2">Password</label>
-				<div class="col-md-7">
+				<label class="col-md-4">Password</label>
+				<div class="col-md-8">
 				<?php  
 					echo $this->Form->input('password',array(
 							'class'=>"form-control",
@@ -36,8 +36,8 @@
 				</div>
 			</div>
 			<div class="form-group col-md-12">
-				<label class="col-md-2">Re enter password</label>
-				<div class="col-md-7">
+				<label class="col-md-4">Re enter password</label>
+				<div class="col-md-8">
 					<?php 		
 						echo $this->Form->input('cnf_password',array(
 								'class'=>"form-control",
