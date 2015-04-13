@@ -8,7 +8,7 @@
 
 
 $(document).on('change',':file',function(){
-
+    console.log('on change event called');
     $('#'+ipname+'_display').attr('src','');
     $('#'+ipname+'').val('');
     $('#'+ipname+'_path').val('');
@@ -18,7 +18,8 @@ $(document).on('change',':file',function(){
 
     var ipname = $(this)[0]['id'];
     if( $('#'+ipname).val()){
-      ajax_pic_upload(ipname);                  
+      ajax_pic_upload(ipname);    
+      console.log('after ajax upload');              
     }  
 });
 
@@ -71,7 +72,7 @@ function ajax_pic_upload(ipname) {
             beforeSubmit(ipname);
 		},			
         success: function(resp){
-            // console.log(resp);
+            console.log('resp');
             var ret = jQuery.parseJSON(resp);
             
             if(ret._error == "error"){
