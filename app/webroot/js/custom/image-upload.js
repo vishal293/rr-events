@@ -1,29 +1,29 @@
-$(':file').change(function(ev) {
-    // console.log('on file upload');
-    var ipname = $(this)[0]['id'];
-    if( $('#'+ipname).val()){
-      ajax_pic_upload(ipname);                  
-    } 
-});
+// $(':file').change(function(ev) {
+//     // console.log('on file upload');
+//     var ipname = $(this)[0]['id'];
+//     if( $('#'+ipname).val()){
+//       ajax_pic_upload(ipname);                  
+//     }    
+// });
 
 
 $(document).on('change',':file',function(){
      var ipname = $(this)[0]['id'];
     if( $('#'+ipname).val()){
       ajax_pic_upload(ipname);                  
-    }
+    }  
 });
 
 $("a[id$='_remove'").click(function(){
     var ipname = $(this).attr('id');
     ipname = ipname.replace('_remove','');
-    $('#'+ipname+'_display').attr('src','');
-    $('#'+ipname+'').val('');
-    $('#'+ipname+'_path').val('');
-    $('#'+ipname+'_output').val('');
-    $('#'+ipname+'_link').attr('style','display:none');
-    $('#'+ipname+'_remove').attr('style','display:none');
-}); 
+                    $('#'+ipname+'_display').attr('src','');
+                    $('#'+ipname+'').val('');
+                    $('#'+ipname+'_path').val('');
+                    $('#'+ipname+'_output').val('');
+                    $('#'+ipname+'_link').attr('style','display:none');
+                    $('#'+ipname+'_remove').attr('style','display:none');
+                }); 
 
 
 function ajax_pic_upload(ipname) {
@@ -73,7 +73,7 @@ function ajax_pic_upload(ipname) {
              }
             else{     
                 if(ret._path != ''){
-                    console.log(ret);
+                    // console.log(ret);
                     $('#'+ipname+'_link').attr("style","display:block");
                     $('#'+ipname+'_path').val(ret._path);
                     $('#'+ipname+'_link').attr("href",ret._path);   
