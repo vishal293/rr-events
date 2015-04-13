@@ -8,35 +8,25 @@
 
 
 $(document).on('change',':file',function(){
-    console.log('on change event called');
-    $('#'+ipname+'_display').attr('src','');
-    $('#'+ipname+'').val('');
-    $('#'+ipname+'_path').val('');
-    $('#'+ipname+'_output').val('');
-    $('#'+ipname+'_link').attr('style','display:none');
-    $('#'+ipname+'_remove').attr('style','display:none');
-
     var ipname = $(this)[0]['id'];
     if( $('#'+ipname).val()){
-      ajax_pic_upload(ipname);    
-      console.log('after ajax upload');              
+      ajax_pic_upload(ipname);            
     }  
 });
 
 $("a[id$='_remove'").click(function(){
     var ipname = $(this).attr('id');
     ipname = ipname.replace('_remove','');
-                    $('#'+ipname+'_display').attr('src','');
-                    $('#'+ipname+'').val('');
-                    $('#'+ipname+'_path').val('');
-                    $('#'+ipname+'_output').val('');
-                    $('#'+ipname+'_link').attr('style','display:none');
-                    $('#'+ipname+'_remove').attr('style','display:none');
-                }); 
+        $('#'+ipname+'_display').attr('src','');
+        $('#'+ipname+'').val('');
+        $('#'+ipname+'_path').val('');
+        $('#'+ipname+'_output').val('');
+        $('#'+ipname+'_link').attr('style','display:none');
+        $('#'+ipname+'_remove').attr('style','display:none');
+    }); 
 
 
 function ajax_pic_upload(ipname) {
-	
     mainURL = document.URL;
     var url = mainURL.split("/");
     var module = url[3];
@@ -91,7 +81,7 @@ function ajax_pic_upload(ipname) {
                     $('#'+ipname+'_opt').attr({src :resp._path,
                                             style: 'height:150px; width:220px;'
                                             });    
-                    $('#'+ipname+'_remove').attr("style","display:block");
+                    // $('#'+ipname+'_remove').attr("style","display:block");
                 }                     
             }
 		},
