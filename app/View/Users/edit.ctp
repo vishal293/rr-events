@@ -110,7 +110,7 @@
 	</div>	
 </div>
 
-<div class="col-md-6">
+<div class="col-md-5">
 	<div class="panel panel-info mobile-top-margin">
 		<div class="panel-heading">
 			Change Password
@@ -126,7 +126,8 @@
 				<?php  
 					echo $this->Form->input('password',array(
 							'class'=>"form-control",
-							'label'=>false
+							'label'=>false,
+							'value'=> ''
 						)
 					);
 				?>		

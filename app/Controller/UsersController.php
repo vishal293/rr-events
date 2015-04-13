@@ -150,7 +150,6 @@
 			}
 
 			if($this->request->is('post')){
-				//pr($this->request->data);
 				if($this->User->save($this->request->data)){
 					$this->Session->setFlash('password updated');
 					$this->redirect(array('controller'=>'users','action'=>'index'));
