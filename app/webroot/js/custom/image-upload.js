@@ -11,7 +11,16 @@ $(document).on('change',':file',function(){
      var ipname = $(this)[0]['id'];
     if( $('#'+ipname).val()){
       ajax_pic_upload(ipname);                  
-    }  
+    }else{
+        ipname = ipname.replace('_remove','');
+                        $('#'+ipname+'_display').attr('src','');
+                        $('#'+ipname+'').val('');
+                        $('#'+ipname+'_path').val('');
+                        $('#'+ipname+'_output').val('');
+                        $('#'+ipname+'_link').attr('style','display:none');
+                        $('#'+ipname+'_remove').attr('style','display:none');
+                    }); 
+        }
 });
 
 $("a[id$='_remove'").click(function(){
