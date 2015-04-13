@@ -154,13 +154,8 @@
 					$this->Session->setFlash('password updated');
 					$this->redirect(array('controller'=>'users','action'=>'index'));
 				}
-				else{
-					$this->Session->setFlash('unable to update password');
-					$this->redirect(array('controller'=>'users','action'=>'index'));
-				}
 			}
-			$this->render(false);
-			$this->layout= false;						
+			$this->request->data = $this->User->findById($id);						
 		}
 	} 
  ?>

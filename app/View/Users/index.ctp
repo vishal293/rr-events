@@ -90,6 +90,23 @@
 													)
 											);
 										?>
+										<?php
+											$id = $k['User']['id'];
+											echo $this->Html->link(
+												'<span class="glyphicon glyphicon-random" aria-hidden="true"></span> Change password',
+												array(
+													'controller' =>'users',
+													'action' => 'changepassword',
+													$id
+													),
+												array(
+													'class'=>'btn-primary btn-sm',
+													'div'=>false,
+													'escape' => false,
+													'confirm'=>'Are you sure you want to change password for this user'
+													)
+											);
+										?>
 								<?php endif; ?>
 								</td>
 							</tr>
