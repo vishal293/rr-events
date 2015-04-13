@@ -158,7 +158,9 @@
 					$this->Session->setFlash('unable to update password');
 					$this->redirect(array('controller'=>'users','action'=>'index'));
 				}
-			}						
+			}
+			$this->render(false);
+			$this->layout= false;						
 		}
 	} 
  ?>
