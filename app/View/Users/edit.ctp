@@ -72,7 +72,7 @@
 
 <!-- User details -->
 
-<div class="col-md-5">
+<div class="col-md-6">
     <div class="row">    	
 	    <div class="panel panel-info">
             <div class="panel-heading">
@@ -110,7 +110,7 @@
 	</div>	
 </div>
 
-<div class="col-md-5">
+<div class="col-md-8">
 	<div class="panel panel-info mobile-top-margin">
 		<div class="panel-heading">
 			Change Password
