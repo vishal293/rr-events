@@ -79,7 +79,7 @@ function ajax_pic_upload(ipname) {
                     $('#'+ipname+'_opt').attr({src :resp._path,
                                             style: 'height:150px; width:220px;'
                                             });
-                    if(($('#'+ipname+'_display').attr('src') != baseUrl+"img/ajax-loader.gif") || ($('#'+ipname+'_display').attr('src') != ''){
+                    if(($('#'+ipname+'_display').attr('src') != baseUrl+"img/ajax-loader.gif") || ($('#'+ipname+'_display').attr('src') != '')){
                         $('#'+ipname+'_remove').attr("style","display:block");
                     }   
                 }                     
