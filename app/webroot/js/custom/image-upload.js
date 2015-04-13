@@ -56,8 +56,7 @@ function ajax_pic_upload(ipname) {
 		beforeSend: function(){
             $('#'+ipname+'_link').attr("style","display:block");
 			$('#'+ipname+'_output').hide();
-            $('#'+ipname+'_display').attr("src",baseUrl+"img/ajax-loader.gif");    
-
+            $('#'+ipname+'_display').attr("src",baseUrl+"img/ajax-loader.gif");
             $('#'+ipname+'_loader').show();
             beforeSubmit(ipname);
 		},			
@@ -69,8 +68,7 @@ function ajax_pic_upload(ipname) {
                 $('#'+ipname+'_loader').hide();
                 $('#'+ipname+'_output').show();
                 $('#'+ipname+'_output').html("<p class='text-danger'>Cannot Upload image.</p>");
-             }
-            else{     
+             }else{     
                 if(ret._path != ''){
                     // console.log(ret);
                     $('#'+ipname+'_link').attr("style","display:block");
