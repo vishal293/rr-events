@@ -70,7 +70,7 @@ function ajax_pic_upload(ipname) {
                 $('#'+ipname+'_output').html("<p class='text-danger'>Cannot Upload image.</p>");
              }else{     
                 if(ret._path != ''){
-                    // console.log(ret);
+                    console.log(ret);
                     $('#'+ipname+'_link').attr("style","display:block");
                     $('#'+ipname+'_path').val(ret._path);
                     $('#'+ipname+'_link').attr("href",ret._path);   
@@ -78,8 +78,8 @@ function ajax_pic_upload(ipname) {
                     // $('#'+ipname+'_loader').html("<img src='"+baseUrl+"img/tick.png' alt='sucess'>");        
                     $('#'+ipname+'_opt').attr({src :resp._path,
                                             style: 'height:150px; width:220px;'
-                                            }); 
-                    if($('#'+ipname+'_display').attr('src') != baseUrl+"img/ajax-loader.gif"){
+                                            });
+                    if(($('#'+ipname+'_display').attr('src') != baseUrl+"img/ajax-loader.gif") || ($('#'+ipname+'_display').attr('src') != ''){
                         $('#'+ipname+'_remove').attr("style","display:block");
                     }   
                 }                     
