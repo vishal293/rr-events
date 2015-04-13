@@ -1,4 +1,3 @@
-  
 $(':file').change(function(ev) {
     // console.log('on file upload');
     var ipname = $(this)[0]['id'];
@@ -72,18 +71,19 @@ function ajax_pic_upload(ipname) {
                 $('#'+ipname+'_output').show();
                 $('#'+ipname+'_output').html("<p class='text-danger'>Cannot Upload image.</p>");
              }
-            else{   
-                // console.log(ret);
-                $('#'+ipname+'_link').attr("style","display:block");
-                $('#'+ipname+'_path').val(ret._path);
-                $('#'+ipname+'_link').attr("href",ret._path);   
-                $('#'+ipname+'_display').attr("src",ret._path);  
-                 // $('#'+ipname+'_loader').html("<img src='"+baseUrl+"img/tick.png' alt='sucess'>");        
-                $('#'+ipname+'_opt').attr({src :resp._path,
-                                        style: 'height:150px; width:220px;'
-                                        });    
-                $('#'+ipname+'_remove').attr("style","display:block");  
-                                         
+            else{     
+                if(ret._path != ''){
+                    console.log(ret);
+                    $('#'+ipname+'_link').attr("style","display:block");
+                    $('#'+ipname+'_path').val(ret._path);
+                    $('#'+ipname+'_link').attr("href",ret._path);   
+                    $('#'+ipname+'_display').attr("src",ret._path);  
+                     // $('#'+ipname+'_loader').html("<img src='"+baseUrl+"img/tick.png' alt='sucess'>");        
+                    $('#'+ipname+'_opt').attr({src :resp._path,
+                                            style: 'height:150px; width:220px;'
+                                            });    
+                    $('#'+ipname+'_remove').attr("style","display:block");
+                }                     
             }
 		},
         error: function(resp) {

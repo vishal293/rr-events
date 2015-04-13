@@ -47,6 +47,7 @@
             <!-- /.navbar-header -->
             <ul class="nav navbar-top-links navbar-right">
                 <li style="margin-right: 85px;">
+                    Current Server Time is 
                     <?php 
                     $dt = new DateTime();
                     echo $dt->format('d-m-Y g:i A');
