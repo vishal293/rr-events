@@ -142,6 +142,27 @@
 
 			}
 		}
+
+		public function edit($id = ""){
+			if(!$id){
+				$this->Session->setFlash('Invalid User');
+				$this->redirect(array('controller'=>'users','action'=>'index'));
+			}
+
+			if($this->request->is('post')){
+				//pr($this->request->data);
+				if($this->User->save($this->request->data)){
+					$this->Session->setFlash('password updated');
+					$this->redirect(array('controller'=>'users','action'=>'index'));
+				}
+				else{
+					$this->Session->setFlash('unable to update password');
+				}
+			}
+
+			$this->request->data = $this->User->findById($id);	
+								
+		}
 	} 
  ?>
 

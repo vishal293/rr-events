@@ -110,6 +110,55 @@
 	</div>	
 </div>
 
+<div class="col-md-6">
+	<div class="panel panel-info mobile-top-margin">
+		<div class="panel-heading">
+			Change Password
+		</div>
+		<div class="panel-body">
+			<?php
+				echo $this->Form->create('User', array('controller' => 'users', 'action' => 'changepassword'));
+				echo $this->Form->input('id');
+			?>
+			<div class="form-group col-md-12">
+				<label class="col-md-2">Password</label>
+				<div class="col-md-7">
+				<?php  
+					echo $this->Form->input('password',array(
+							'class'=>"form-control",
+							'label'=>false
+						)
+					);
+				?>		
+				</div>
+			</div>
+			<div class="form-group col-md-12">
+				<label class="col-md-2">Re-Password</label>
+				<div class="col-md-7">
+					<?php 		
+						echo $this->Form->input('cnf_password',array(
+								'class'=>"form-control",
+								'label'=>false,
+								'type'=>'password'
+							)
+						);
+					?>
+				</div>
+			</div>
+			<center>
+			<?php 
+				echo $this->Form->button('Update Password',array(
+						'type'=>'submit',
+						'class'=>'btn btn-success'
+					)
+				);
+			?>
+			</center>
+			<br />
+		</div>
+	</div>
+</div>
+
 </div>
 
 		
