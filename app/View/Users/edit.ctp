@@ -1,6 +1,11 @@
 <?php  
   echo $this->Html->css('users/add');
 ?>
+<style type="text/css">
+.error-message{
+  font-size:14px;color:red;text-decoration:none
+}
+</style>
 <div class="row">
     <div class="col-md-6">
         <div class="panel panel-info mobile-top-margin">
@@ -56,11 +61,12 @@
 						</div>
 						</div>
 						<center>
-						<?php 
-							echo $this->Form->button('Update User',array('type'=>'submit',
-																	'class'=>'btn btn-success'
-															)
-							);
+						<?php
+						$options = array(
+						    'label' => 'Update User',
+						    'class'=>'btn btn-success'
+						); 
+							echo $this->Form->end($options);
 						?>
 						</center>
 						<br />
@@ -134,7 +140,7 @@
 				</div>
 			</div>
 			<div class="form-group col-md-12">
-				<label class="col-md-2">Re-Password</label>
+				<label class="col-md-2">Re enter password</label>
 				<div class="col-md-7">
 					<?php 		
 						echo $this->Form->input('cnf_password',array(
@@ -148,11 +154,11 @@
 			</div>
 			<center>
 			<?php 
-				echo $this->Form->button('Update Password',array(
-						'type'=>'submit',
-						'class'=>'btn btn-success'
-					)
-				);
+				$options = array(
+				    'label' => 'Update Password',
+				    'class'=>'btn btn-success'
+				); 
+				echo $this->Form->end($options);
 			?>
 			</center>
 			<br />
