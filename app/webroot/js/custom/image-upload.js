@@ -3,14 +3,6 @@ $(':file').change(function(ev) {
     var ipname = $(this)[0]['id'];
     if( $('#'+ipname).val()){
       ajax_pic_upload(ipname);                  
-    }    
-});
-
-
-$(document).on('change',':file',function(){
-     var ipname = $(this)[0]['id'];
-    if( $('#'+ipname).val()){
-      ajax_pic_upload(ipname);                  
     }else{
         $('#'+ipname+'_display').attr('src','');
         $('#'+ipname+'').val('');
@@ -18,6 +10,14 @@ $(document).on('change',':file',function(){
         $('#'+ipname+'_output').val('');
         $('#'+ipname+'_link').attr('style','display:none');
         $('#'+ipname+'_remove').attr('style','display:none');
+    }  
+});
+
+
+$(document).on('change',':file',function(){
+     var ipname = $(this)[0]['id'];
+    if( $('#'+ipname).val()){
+      ajax_pic_upload(ipname);                  
     }
 });
 
