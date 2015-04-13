@@ -754,7 +754,10 @@
 var counter = 4;
 var limit = 10;
 function addInput(divName){ 
-    // $( ":input" ).trigger( "click" );
+    if($('#photo_'+counter).val() == ''){
+        alert('Please select previous photo first');
+        return false;
+    }
     if (counter == limit)  {
         alert("Maximum upload limit " + counter);
     }

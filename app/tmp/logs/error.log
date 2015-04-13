@@ -25978,3 +25978,641 @@ Stack Trace:
 #48 /opt/lampp/htdocs/rr-events/lib/Cake/Core/App.php(904): App::_checkFatalError()
 #49 [internal function]: App::shutdown()
 #50 {main}
+2015-04-13 06:25:29 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:25:29 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:25:56 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:25:56 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:28:04 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:28:04 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:28:09 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:28:09 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:28:11 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:28:11 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:28:14 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:28:14 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:28:20 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:28:20 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:32:43 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:32:43 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:32:48 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:32:48 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:32:50 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:32:50 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:32:53 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:32:53 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:32:56 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:32:56 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:32:59 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:32:59 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:35:08 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:35:08 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:35:13 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:35:13 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:35:15 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:35:15 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:35:17 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:35:17 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:35:31 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:35:31 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:35:40 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:35:46 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:35:49 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:35:55 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:35:59 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:36:07 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:54:17 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:54:17 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:54:25 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:54:25 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:54:27 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:54:27 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:54:35 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:54:35 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:55:14 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:55:14 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:55:22 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:55:27 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:55:32 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:55:34 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:55:37 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-13 06:55:42 Error: [MissingActionException] Action EventsController::,,localhost,rr-events,events,add() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => ',,localhost,rr-events,events,add',
+)
+Request URL: /rr-events/events/,,localhost,rr-events,events,add
+Stack Trace:
+#0 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/rr-events/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/rr-events/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}

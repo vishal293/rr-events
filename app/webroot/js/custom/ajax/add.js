@@ -1,4 +1,5 @@
 var warnMessage = "You have unsaved changes on this page!";
+var preventNextAlert = true;
 
 $(document).ready(function() {
     $('input:not(:button,:submit),textarea,select').change(function () {
@@ -10,23 +11,6 @@ $(document).ready(function() {
         warnMessage = null;
     });
 }); 
-
-// code for handeling photos upload
-$(".photo_upload").click(function(event){
-    var pid = $(this).attr('id');
-    var nid = pid.split("_");
-    var nid = parseInt(nid[1]);
-    var bnid = parseInt(nid - 1);
-    if($('#photo_'+bnid).val() == ''){
-        event.preventDefault();
-        alert('Please select previous photo first');
-        return false;
-    }
-    if(nid >= 4){
-        $('#addmorephoto').show();
-    }
-});
-
 
 // New code added for validation msg
 $(":input").click(function(event){
@@ -62,9 +46,12 @@ $(":input").click(function(event){
     if(labels.length!==0){
         alert("Please Enter the following fields first\n"+labels.join("\n"));
         $('#'+focuses[0]).focus();
+        preventNextAlert = true;
         if(type == 'file'){
             event.preventDefault();
         }
+    }else{
+        preventNextAlert = false;
     }
 }).change(function(){
     var input = $(this);
@@ -72,6 +59,24 @@ $(":input").click(function(event){
     var required_attr = $(this).attr('required');
     if(val && required_attr == 'required'){
         $(this).closest(".form-group").removeClass("has-error"); 
+    }
+});
+
+// code for handeling photos upload
+$(".photo_upload").click(function(event){
+    var pid = $(this).attr('id');
+    var nid = pid.split("_");
+    var nid = parseInt(nid[1]);
+    var bnid = parseInt(nid - 1);
+    if($('#photo_'+bnid).val() == ''){
+        event.preventDefault();
+        if(!preventNextAlert){    
+            alert('Please select previous photo first');
+        }
+        return false;
+    }
+    if(nid >= 4){
+        $('#addmorephoto').show();
     }
 });
 
