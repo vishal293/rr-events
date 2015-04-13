@@ -75,11 +75,11 @@ function ajax_pic_upload(ipname) {
                     $('#'+ipname+'_path').val(ret._path);
                     $('#'+ipname+'_link').attr("href",ret._path);   
                     $('#'+ipname+'_display').attr("src",ret._path);  
-                     // $('#'+ipname+'_loader').html("<img src='"+baseUrl+"img/tick.png' alt='sucess'>");        
+                    // $('#'+ipname+'_loader').html("<img src='"+baseUrl+"img/tick.png' alt='sucess'>");        
                     $('#'+ipname+'_opt').attr({src :resp._path,
                                             style: 'height:150px; width:220px;'
                                             }); 
-                    if($('#'+ipname+'_display').attr('src') != ''){
+                    if($('#'+ipname+'_display').attr('src') != baseUrl+"img/ajax-loader.gif"){
                         $('#'+ipname+'_remove').attr("style","display:block");
                     }   
                 }                     
