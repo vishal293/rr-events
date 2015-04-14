@@ -29,13 +29,13 @@
                                 array('value'=>$uid,
                                     'type'=>'hidden'
                                 )
-        );       
-
-        echo $this->Form->input('like_counter',
-                                array('value'=>$event['like_counter'],
-                                    'type'=>'hidden'
-                                )
         );
+
+        echo $this->Form->input('data.like_counter',
+                                        'value'=>$event['like_counter'],
+                                        'type'=>'hidden'
+                                    )
+        );       
 
         echo $this->Form->input('data.user',
                                 array('label'=>'Added By',
