@@ -104,6 +104,7 @@
 				$event['notification_occupation'] = $json_object->notification_occupation;
 				$event['notification_gender'] = $json_object->notification_gender;
 				$event['notification_agegroup'] = $json_object->notification_agegroup;
+				$event['like_counter'] = $json_object->like_counter;
 
 			}
 			return $event;
