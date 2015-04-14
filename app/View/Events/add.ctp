@@ -96,7 +96,7 @@
                                 <?php echo $this->Html->image('rupee.png',array('style'=>'width:15px; height:15px')); ?>    
                             </span>
                             <input name="data[data][amount]" id="amount" type="text" class="form-control input-sm" tabindex ='3'>
-                            <input name="data[data][like_counter]" id="likecounter" type="text" value="0">
+                            <input name="data[data][like_counter]" id="likecounter" style="display:none;" type="text" value="0">
                         </div>                          
                     </div>
                       <a class="tip2" href="#"> 
