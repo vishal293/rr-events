@@ -1,4 +1,7 @@
-  <?php  echo $this->Html->css('users/add');  ?>
+  <?php  echo $this->Html->css('users/add');  
+var_dump($event);
+
+  ?>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places"></script>
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -17,7 +20,10 @@
   </div>
 </div>
 <!-- /Modal -->
-    <?php   
+    <?php 
+
+
+
         echo $this->Form->create($model=false,
                                      array('type'=>'file',
                                             'role'=>'form',
