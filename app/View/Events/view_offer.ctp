@@ -18,6 +18,9 @@
                                         )
     );  
     echo $this->Form->input('data.id',array('type'=>'hidden','value'=>$event['event_id']));
+
+    echo $this->Form->input('data.like_counter',array('type'=>'hidden','value'=>$event['like_counter']));
+    
     if($event['approved']=='0'){
         echo $this->Form->input('data.approved',array('value'=>'1'
                                             )
