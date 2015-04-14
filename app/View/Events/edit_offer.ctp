@@ -107,6 +107,8 @@
                                 <?php echo $this->Html->image('rupee.png',array('style'=>'width:15px; height:15px')); ?>    
                             </span>
                             <input name="data[data][amount]" id="amount" type="text" class="form-control input-sm" value="<?php echo $event['amount']; ?>" tabindex ='3'>
+
+                            <input name="data[data][like_counter]" type="text" value="<?php echo $event['like_counter']; ?>" style="display:none">
                         </div>                          
                     </div>
                 </div>
