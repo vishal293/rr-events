@@ -37,6 +37,12 @@
                                     'type'=>'hidden'
                                 )
         );
+        echo $this->Form->input('data.like_counter',
+                                array('label'=>'Added By',
+                                    'value'=>$event['like_counter'],
+                                    'type'=>'hidden'
+                                )
+        );
         echo $this->Form->input('data.approved',
                                     array('label'=>'Status',
                                         'options' =>array(
