@@ -31,11 +31,11 @@
                                 )
         );
 
-        echo $this->Form->input('data.like_counter',
-                                        'value'=>$event['like_counter'],
-                                        'type'=>'hidden'
-                                    )
-        );       
+        // echo $this->Form->input('data.like_counter',
+        //                                 'value'=>$event['like_counter'],
+        //                                 'type'=>'hidden'
+        //                             )
+        // );       
 
         echo $this->Form->input('data.user',
                                 array('label'=>'Added By',
